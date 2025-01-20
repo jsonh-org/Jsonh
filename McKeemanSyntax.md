@@ -93,7 +93,7 @@ quoteless_string_contents
     quoteless_string_rune quoteless_string_contents
 
 quoteless_string_rune
-    rune - "," - ":" - "[" - "]" - "{" - "}" - "\"
+    rune - "," - ":" - "[" - "]" - "{" - "}" - "/" - "#" - "\"
     "\" escape
 
 escape
