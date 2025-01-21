@@ -1,3 +1,5 @@
+The syntax of JSONH in [McKeeman Form](https://www.crockford.com/mckeeman.html):
+
 ```
 jsonh
     whitespace element whitespace
@@ -17,7 +19,7 @@ object
 
 properties
     whitespace
-    whitespace property
+    whitespace property whitespace
     whitespace property whitespace property_separator properties
 
 property
@@ -97,7 +99,6 @@ quoteless_string_rune
     "\" escape
 
 escape
-    "\"
     "b"
     "f"
     "n"

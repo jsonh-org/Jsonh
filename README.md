@@ -125,10 +125,156 @@ age = 20
 Whereas JSON is hierarchical and unambiguous, it's not immediately clear what the attributes in TOML refer to.
 Additionally, if you want values as objects, you end up using JSON anyway, making the TOML syntax inconsistent.
 
-## Objection!
+### Objection!
 
-New programming languages and formats get created every day and never reach the light of night due to a lack of usage.
+You might be thinking: new programming languages and formats get created every day, and never reach the light of night due to a lack of usage.
 Basically, it's hard to get people to change to new things.
 
-However, in the case of JSONH, this is not a problem. Unlike programming languages, which are most useful when they have widespread adoption and an ecosystem of packages,
-configuration and data formats like JSONH are useful in personal projects, oblivious to common usage. Use the format that's right for you.
+However, in the case of JSONH, this is not a problem. Programming languages are most useful when they have widespread adoption and an ecosystem of packages.
+However, configuration/data formats like JSONH are useful in personal projects, oblivious to common usage. Use the format that's right for you.
+
+## Syntax
+
+See the [McKeeman-style Syntax](https://github.com/jsonh-org/Jsonh/blob/main/McKeemanSyntax.md).
+
+Since JSONH is a superset of JSON and JSON5, all valid JSON and JSON5 is valid JSONH.
+
+### Objects
+
+Objects contain an ordered sequence of properties (`key: value`).
+
+They are optionally wrapped in braces (`{}`). If not, they terminate at `}`, `]` or the end of the document.
+
+Properties are separated with `,` or a newline. A single trailing comma is allowed.
+
+If two properties have the same key, the first property is replaced.
+
+```jsonh
+# JSONH
+{
+    a: b
+    c: d
+}
+```
+```json
+# JSON
+{
+    "a": "b",
+    "c": "d"
+}
+```
+
+### Arrays
+
+Arrays contain an ordered sequence of items.
+
+They are wrapped in brackets (`[]`).
+
+Items are separated with `,` or a newline. A single trailing comma is allowed.
+
+```jsonh
+# JSONH
+[
+    a
+    b
+]
+```
+```json
+# JSON
+[
+    "a",
+    "b"
+]
+```
+
+### Strings
+
+Strings contain an ordered sequence of characters.
+
+All strings can contain escape sequences starting with `\`:
+- `\b` - backspace
+- `\f` - form feed
+- `\n` - newline
+- `\r` - carriage return
+- `\t` - tab
+- `\v` - vertical tab
+- `\0` - null
+- `\a` - alert
+- `\e` - escape (`\e` = `\u001b`)
+- `\u0000` - UTF-16 escape sequence (`\u00E7` = `ç`)
+- `\x00` - short UTF-16 escape sequence (`\xE7` = `ç`)
+- `\U00000000` - UTF-32 escape sequence (`\U0001F47D` = `👽`)
+- `\(newline)` - escaped newline (`\(newline)` = `(empty)`)
+- `\(rune)` - literal rune (`\q` = `q`)
+
+#### Double-Quoted Strings / Single-Quoted Strings
+
+Double-quoted/single-quoted strings are wrapped in double-quotes (`"`) or single-quotes (`'`).
+
+They can contain newlines.
+
+```jsonh
+"hello
+world\n"
+```
+```json
+"hello\nworld\n"
+```
+
+#### Multi-Quoted Strings (AKA: Triple-Quoted Strings, Multi-Line Strings)
+
+Multi-quoted strings are wrapped in three or more double-quotes (`"""`) or single-quotes (`'''`).
+
+The leading whitespace preceding the closing quotes is stripped from the beginning of each line.
+
+```jsonh
+   """
+  hello
+    world
+  """
+```
+```json
+"hello\n  world"
+```
+
+If the multi-quoted string doesn't contain a newline, no whitespace is stripped.
+
+```jsonh
+'''  hello world  '''
+```
+```json
+"  hello world  "
+```
+
+#### Quoteless Strings (AKA: Unquoted Strings)
+
+Quoteless strings are terminated by a newline or a symbol.
+
+```jsonh
+{ text: hello world, }
+```
+```json
+{ "text": "hello world", }
+```
+
+Unlike other types of strings, symbols need to be escaped.
+
+```jsonh
+this \, is a comma.
+```
+```json
+"this , is a comma."
+```
+
+### Numbers
+
+Numbers represent a rational decimal value.
+
+They can have an optional decimal point (`.`). Leading (`.5`) and trailing (`5.`) decimal points are allowed.
+
+```jsonh
+1.0
+```
+```json
+1.0
+```
