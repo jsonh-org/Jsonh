@@ -277,10 +277,10 @@ Quoteless strings are terminated by a newline or a symbol.
 { text: hello world, }
 ```
 ```json
-{ "text": "hello world", }
+{ "text": "hello world" }
 ```
 
-Unlike other types of strings, symbols need to be escaped.
+Unlike other types of strings, reserved symbols must be escaped.
 
 ```jsonh
 this \, is a comma.
@@ -297,14 +297,14 @@ Numbers represent a numeric value.
 
 Rational numbers are comprised of the following optional components: a sign, an integer, a fraction, and an exponent.
 
-The sign can be `+` or `-`.
-The decimal point can be leading (`.5`) or trailing (`5.`).
-The exponent starts with `e` and an optional sign (`+` or `-`).
+- The sign can be `+` or `-`.
+- The decimal point can be leading (`.5`) or trailing (`5.`).
+- The exponent starts with `e` and an optional sign (`+` or `-`).
 
-If the number starts with `0x` or `0X`, the digits are hexadecimal (base-16).
-If the number starts with `0b` or `0B`, the digits are binary (base-2).
-If the number starts with `0o` or `0O`, the digits are octal (base-8).
-Otherwise, the digits are decimal.
+- If the number starts with `0x` or `0X`, the digits are hexadecimal (base-16).
+- If the number starts with `0b` or `0B`, the digits are binary (base-2).
+- If the number starts with `0o` or `0O`, the digits are octal (base-8).
+- Otherwise, the digits are decimal.
 
 Digits can be separated by underscores (`_`). Leading or trailing underscores are not allowed.
 
@@ -348,6 +348,8 @@ Line comments start with a hash (`#`) or a double-slash (`//`) and are terminate
 ```json
 3.14
 ```
+
+#### Block Comments
 
 Block comments start with a slash-asterisk (`/*`) and are terminated by an asterisk-slash (`*/`).
 
