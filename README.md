@@ -362,7 +362,7 @@ Block comments start with a slash-asterisk (`/*`) and are terminated by an aster
 [  ]
 ```
 
-### Whitespace & Newlines
+### Whitespace
 
 Any unicode whitespace character is considered valid whitespace.
 
@@ -391,6 +391,8 @@ C++:
 isspace(u' '); // JSON whitespace only
 ```
 
+### Newlines
+
 The characters `\n` (line feed), `\r` (carriage return), `\r\n` (carriage return + line feed), `\u2028` (line separator) and `\u2029` (paragraph separator) are valid string line terminators.
 
 > [!NOTE]  
@@ -404,3 +406,37 @@ there"
 ```json
 "hi there"
 ```
+
+### Metadata
+
+#### Byte Encoding
+
+JSONH can be written in any unicode encoding (UTF-8, UTF-16, UTF-32).
+
+#### File Extension
+
+JSONH files should always end with `.jsonh`.
+
+#### Versioning
+
+JSONH uses a versioning system to ensure any changes to the syntax are properly documented.
+
+Implementations may support one or more versions of JSONH.
+
+### Contributing
+
+Contributions are welcome.
+
+#### Suggestions
+
+Please raise an issue. Note that the format shouldn't stray too far from HJSON or JSON5 and should be directly translatable to JSON.
+
+#### Parser Implementations
+
+You are welcome to write a JSONH parser in a language of your choice. Raise an issue so it can be added to the list.
+
+### Parser Implementations
+
+| Language | Implementation | Package |
+| -------- | -------------- | ------- |
+| C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [WIP]
