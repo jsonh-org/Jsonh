@@ -147,13 +147,35 @@ number
     sign digits exponent
     sign digits fraction exponent
     sign fraction exponent
-    hex_integer
-    binary_integer
-    octal_integer
-    named_number
+
+    sign "0x" hex_digits hex_exponent
+    sign "0x" hex_digits hex_fraction hex_exponent
+    sign "0x" hex_fraction hex_exponent
+
+    sign "0b" binary_digits binary_exponent
+    sign "0b" binary_digits binary_fraction binary_exponent
+    sign "0b" binary_fraction binary_exponent
+
+    sign "0o" octal_digits octal_exponent
+    sign "0o" octal_digits octal_fraction octal_exponent
+    sign "0o" octal_fraction octal_exponent
+
+    sign named_number
 
 fraction
     "." digits
+    "."
+
+hex_fraction
+    "." hex_digits
+    "."
+
+binary_fraction
+    "." binary_digits
+    "."
+
+octal_fraction
+    "." octal_digits
     "."
 
 exponent
@@ -161,27 +183,28 @@ exponent
     "E" sign digits
     "e" sign digits
 
+hex_exponent
+    ""
+    "E" sign hex_digits
+    "e" sign hex_digits
+
+binary_exponent
+    ""
+    "E" sign binary_digits
+    "e" sign binary_digits
+
+octal_exponent
+    ""
+    "E" sign octal_digits
+    "e" sign octal_digits
+
 sign
     ""
     "+"
     "-"
 
-hex_integer
-    sign "0x" hex_digits
-    sign "0X" hex_digits
-
-binary_integer
-    sign "0b" binary_digits
-    sign "OB" binary_digits
-
-octal_integer
-    sign "0o" octal_digits
-    sign "0O" octal_digits
-
 named_number
-    sign "Infinity"
     sign "infinity"
-    sign "NaN"
     sign "nan"
 
 newline

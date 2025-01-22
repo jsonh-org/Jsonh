@@ -5,6 +5,8 @@
 JSON is great. Until you miss that trailing comma... or want to use comments. What about multiline strings?
 JSONH provides a much more elegant way to write JSON that's designed for humans rather than machines.
 
+Since JSONH is compatible with JSON, any JSONH syntax can be represented with equivalent JSON.
+
 ## Example
 
 ```jsonh
@@ -127,7 +129,7 @@ Additionally, if you want values as objects, you end up using JSON anyway, makin
 
 ### Objection!
 
-You might be thinking: new programming languages and formats get created every day, and never reach the light of night due to a lack of usage.
+You might be thinking: new programming languages and formats get created all the time, and never reach the light of day due to a lack of usage.
 Basically, it's hard to get people to change to new things.
 
 However, in the case of JSONH, this is not a problem. Programming languages are most useful when they have widespread adoption and an ecosystem of packages.
@@ -143,24 +145,47 @@ Since JSONH is a superset of JSON and JSON5, all valid JSON and JSON5 is valid J
 
 Objects contain an ordered sequence of properties (`key: value`).
 
-They are optionally wrapped in braces (`{}`). If not, they terminate at `}`, `]` or the end of the document.
+They are optionally wrapped in braces (`{}`).
 
 Properties are separated with `,` or a newline. A single trailing comma is allowed.
 
 If two properties have the same key, the first property is replaced.
 
 ```jsonh
-# JSONH
 {
     a: b
     c: d
 }
 ```
 ```json
-# JSON
 {
     "a": "b",
     "c": "d"
+}
+```
+
+If not wrapped in braces, they terminate at `}`, `]` or the end of the document.
+
+Nested braces should not be omitted to avoid confusion.
+
+```jsonh
+meal: pizza
+drink: cola
+snacks: [
+    "name": "biscuit",
+    "flavor": "chocolate"
+]
+```
+```json
+{
+    "meal": "pizza",
+    "drink": "cola",
+    "snacks": [
+        {
+            "name": "biscuit",
+            "flavor": "chocolate"
+        }
+    ]
 }
 ```
 
@@ -173,14 +198,12 @@ They are wrapped in brackets (`[]`).
 Items are separated with `,` or a newline. A single trailing comma is allowed.
 
 ```jsonh
-# JSONH
 [
     a
     b
 ]
 ```
 ```json
-# JSON
 [
     "a",
     "b"
@@ -268,13 +291,114 @@ this \, is a comma.
 
 ### Numbers
 
-Numbers represent a rational decimal value.
+Numbers represent a numeric value.
 
-They can have an optional decimal point (`.`). Leading (`.5`) and trailing (`5.`) decimal points are allowed.
+#### Rational Numbers
+
+Rational numbers are comprised of the following optional components: a sign, an integer, a fraction, and an exponent.
+
+The sign can be `+` or `-`.
+The decimal point can be leading (`.5`) or trailing (`5.`).
+The exponent starts with `e` and an optional sign (`+` or `-`).
+
+If the number starts with `0x` or `0X`, the digits are hexadecimal (base-16).
+If the number starts with `0b` or `0B`, the digits are binary (base-2).
+If the number starts with `0o` or `0O`, the digits are octal (base-8).
+Otherwise, the digits are decimal.
+
+Digits can be separated by underscores (`_`). Leading or trailing underscores are not allowed.
 
 ```jsonh
-1.0
+[
+    1.0
+    .5e3
+    +64e-1
+    354_246.1_2_3
+    0xa1b.5e2
+]
 ```
 ```json
-1.0
+[
+    1,
+    500,
+    6.4,
+    354246.123,
+    258750.0
+]
+```
+
+#### Named Numbers
+
+Named numbers have an optional sign (`+` or `-`) followed by any of the following (case-insensitive):
+- `Infinity`
+- `NaN`
+
+### Comments
+
+Comments are allowed in the space of any whitespace and do not affect the resulting JSONH.
+
+#### Line Comments
+
+Line comments start with a hash (`#`) or a double-slash (`//`) and are terminated by a newline.
+
+```jsonh
+# Numbers
+3.14 # pi approximation
+```
+```json
+3.14
+```
+
+Block comments start with a slash-asterisk (`/*`) and are terminated by an asterisk-slash (`*/`).
+
+```jsonh
+[ /*
+  Example
+*/ ]
+```
+```json
+[  ]
+```
+
+### Whitespace & Newlines
+
+Any unicode whitespace character is considered valid whitespace.
+
+> [!NOTE]  
+> Languages that don't support unicode whitespace may only support JSON whitespace (space, tab, line feed, carriage return).
+> As such, non-JSON whitespace should be avoided.
+
+C#:
+```cs
+char.IsWhiteSpace(' ');
+```
+Ruby:
+```rb
+' '.match(/\s/)
+```
+Python:
+```py
+' '.isspace()
+```
+Lua:
+```lua
+(" "):match("%s") -- JSON whitespace only
+```
+C++:
+```cpp
+isspace(u' '); // JSON whitespace only
+```
+
+The characters `\n` (line feed), `\r` (carriage return), `\r\n` (carriage return + line feed), `\u2028` (line separator) and `\u2029` (paragraph separator) are valid string line terminators.
+
+> [!NOTE]  
+> Languages that don't support unicode characters may only support JSON newlines (line feed, carriage return, carriage return + line feed).
+> As such, non-JSON newlines should be avoided.
+
+```jsonh
+"hi \
+there"
+```
+```json
+"hi there"
 ```
