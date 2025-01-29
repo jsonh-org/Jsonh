@@ -166,7 +166,8 @@ If two properties have the same key, the first property is replaced.
 
 If not wrapped in braces, they terminate at `}`, `]` or the end of the document.
 
-Nested braces should not be omitted to avoid confusion.
+> [!TIP]  
+> Keep braces for nested objects to avoid confusion.
 
 ```jsonh
 meal: pizza
@@ -207,6 +208,30 @@ Items are separated with `,` or a newline. A single trailing comma is allowed.
 [
     "a",
     "b"
+]
+```
+
+If not wrapped in brackets, they terminate at `}`, `]`, a property name or the end of the document.
+
+```jsonh
+pizza,
+prosciutto
+drinks: cola, lemonade,
+ice cream,
+dessert: chocolate
+```
+```json
+[
+    "pizza",
+    "prosciutto",
+    {
+        "drinks": [
+            "cola",
+            "lemonade",
+            "ice cream"
+        ],
+        "dessert": "chocolate"
+    }
 ]
 ```
 
