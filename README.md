@@ -12,12 +12,13 @@ Since JSONH is compatible with JSON, any JSONH syntax can be represented with eq
 ```jsonh
 {
     // use #, // or /**/ comments
+    
     // quotes are optional
     keys: without quotes,
 
     // commas are optional
     isn\'t: {
-        that: cool?
+        that: cool? # yes
     }
 
     // brackets are optional
@@ -32,9 +33,9 @@ Since JSONH is compatible with JSON, any JSONH syntax can be represented with eq
     
     // compatible with JSON5
     key: 0xDEADCAFE
-    
+
     // or use JSON
-    "old-school": 1337
+    "old school": 1337
 }
 ```
 
