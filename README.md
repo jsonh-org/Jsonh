@@ -18,6 +18,8 @@ Since JSONH is compatible with JSON, any JSONH syntax can be represented with eq
     isn\'t: {
         that: cool?
     }
+    // brackets are optional
+    i love: pizza, ice cream, cola
     // use multiline strings
     haiku: '''
         Let me die in spring
