@@ -333,11 +333,12 @@ Rational numbers are comprised of the following optional components: a sign, an 
 - The sign can be `+` or `-`.
 - The decimal point can be leading (`.5`) or trailing (`5.`).
 - The exponent starts with `e` and an optional sign (`+` or `-`).
+- The exponent can be fractional.
 
-- If the number starts with `0x` or `0X`, the digits are hexadecimal (base-16).
-- If the number starts with `0b` or `0B`, the digits are binary (base-2).
-- If the number starts with `0o` or `0O`, the digits are octal (base-8).
-- Otherwise, the digits are decimal.
+- If the number starts with `0x` or `0X`, every digit is hexadecimal (base-16).
+- If the number starts with `0b` or `0B`, every digit is binary (base-2).
+- If the number starts with `0o` or `0O`, every digit is octal (base-8).
+- Otherwise, every digit is decimal (base-10).
 
 Digits can be separated by underscores (`_`). Leading or trailing underscores are not allowed.
 
@@ -345,7 +346,7 @@ Digits can be separated by underscores (`_`). Leading or trailing underscores ar
 [
     1.0
     .5e3
-    +64e-1
+    +64e-1.0
     354_246.1_2_3
     0xa1b.5e2
 ]
