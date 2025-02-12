@@ -243,6 +243,17 @@ dessert: chocolate
 ]
 ```
 
+### Named Literals
+
+Named literals are case-insensitive, but the recommended casing is below.
+
+- `null` - no value (any type)
+- `true` - true (boolean)
+- `false` - false (boolean)
+- `Infinity`/`+Infinity` - positive infinity (floating point)
+- `-Infinity` - negative infinity (floating point)
+- `NaN`/`+NaN`/`-NaN` - not a number (floating point)
+
 ### Strings
 
 Strings contain an ordered sequence of characters.
@@ -360,12 +371,6 @@ Digits can be separated by underscores (`_`). Leading or trailing underscores ar
     258750.0
 ]
 ```
-
-#### Named Numbers
-
-Named numbers have an optional sign (`+` or `-`) followed by any of the following (case-insensitive):
-- `Infinity`
-- `NaN`
 
 ### Comments
 
