@@ -332,7 +332,7 @@ Rational numbers are comprised of the following optional components: a sign, an 
 
 - The sign can be `+` or `-`.
 - The decimal point can be leading (`.5`) or trailing (`5.`).
-- The exponent starts with `e` and an optional sign (`+` or `-`).
+- The exponent starts with `e` or `E` and an optional sign (`+` or `-`).
 - The exponent can be fractional.
 
 - If the number starts with `0x` or `0X`, every digit is hexadecimal (base-16).
@@ -400,7 +400,7 @@ Block comments start with a slash-asterisk (`/*`) and are terminated by an aster
 
 Any unicode whitespace character is considered valid whitespace.
 
-> [!NOTE]  
+> [!NOTE]
 > Languages that don't support unicode whitespace may only support JSON whitespace (space, tab, line feed, carriage return).
 > As such, non-JSON whitespace should be avoided.
 
@@ -429,7 +429,7 @@ isspace(u' '); // JSON whitespace only
 
 The characters `\n` (line feed), `\r` (carriage return), `\r\n` (carriage return + line feed), `\u2028` (line separator) and `\u2029` (paragraph separator) are valid string line terminators.
 
-> [!NOTE]  
+> [!NOTE]
 > Languages that don't support unicode characters may only support JSON newlines (line feed, carriage return, carriage return + line feed).
 > As such, non-JSON newlines should be avoided.
 
