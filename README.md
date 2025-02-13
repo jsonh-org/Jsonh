@@ -469,12 +469,18 @@ Contributions are welcome.
 
 Please raise an issue. Note that the format shouldn't stray too far from HJSON or JSON5 and should be directly translatable to JSON.
 
-#### Parser Implementations
+#### Implementations
 
 You are welcome to write a JSONH parser in a language of your choice. Raise an issue so it can be added to the list.
 
-### Parser Implementations
+#### Parser Implementations
 
 | Language | Implementation | Package |
 | -------- | -------------- | ------- |
 | C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [WIP]
+
+#### Highlighter Implementations
+
+| Editor | Implementation | Package |
+| ------ | -------------- | ------- |
+| VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [WIP]
