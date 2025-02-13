@@ -339,12 +339,11 @@ Numbers represent a numeric value.
 
 #### Rational Numbers
 
-Rational numbers are comprised of the following optional components: a sign, an integer, a fraction, and an exponent.
+Rational numbers are comprised of the following optional components: a sign, a fractional number, and a fractional exponent.
 
 - The sign can be `+` or `-`.
 - The decimal point can be leading (`.5`) or trailing (`5.`).
 - The exponent starts with `e` or `E` and an optional sign (`+` or `-`).
-- The exponent can be fractional.
 
 - If the number starts with `0x` or `0X`, every digit is hexadecimal (base-16).
 - If the number starts with `0b` or `0B`, every digit is binary (base-2).
