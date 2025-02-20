@@ -294,6 +294,8 @@ Multi-quoted strings are wrapped in three or more double-quotes (`"""`) or singl
 
 The leading whitespace preceding the closing quotes is stripped from the beginning of each line.
 
+The whitespace preceding the first newline is also stripped.
+
 ```jsonh
    """
   hello
@@ -334,7 +336,7 @@ this \, is a comma. this\
 "this , is a comma. this\n is a newline."
 ```
 
-Leading/trailing whitespace is always trimmed.
+Leading/trailing whitespace is always stripped.
 
 ```jsonh
 a:   b c ,
