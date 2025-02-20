@@ -334,6 +334,17 @@ this \, is a comma. this\
 "this , is a comma. this\n is a newline."
 ```
 
+Leading/trailing whitespace is always trimmed.
+
+```jsonh
+a:   b c ,
+```
+```json
+{
+    "a": "b c"
+}
+```
+
 ### Numbers
 
 Numbers represent a numeric value.
