@@ -250,9 +250,9 @@ Named literals are case-insensitive, but the recommended casing is below.
 - `null` - no value (any type)
 - `true` - true (boolean)
 - `false` - false (boolean)
-- `Infinity`/`+Infinity` - positive infinity (floating point)
-- `-Infinity` - negative infinity (floating point)
-- `NaN`/`+NaN`/`-NaN` - not a number (floating point)
+- `Infinity`/`+Infinity` - positive infinity (number)
+- `-Infinity` - negative infinity (number)
+- `NaN`/`+NaN`/`-NaN` - not a number (number)
 
 ### Strings
 
@@ -272,7 +272,7 @@ All strings can contain escape sequences starting with `\`:
 - `\x00` - short UTF-16 escape sequence (`\xE7` = `ç`)
 - `\U00000000` - UTF-32 escape sequence (`\U0001F47D` = `👽`)
 - `\(newline)` - escaped newline (`\(newline)` = `(empty)`)
-- `\(rune)` - literal rune (`\q` = `q`)
+- `\(rune)` - literal character (`\q` = `q`)
 
 #### Double-Quoted Strings / Single-Quoted Strings
 
