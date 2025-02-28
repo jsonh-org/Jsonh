@@ -385,6 +385,10 @@ Digits can be separated by underscores (`_`). Leading or trailing underscores ar
 ]
 ```
 
+> [!NOTE]
+> Since fractional exponents (e.g. `1e3.4`) can be irrational, implementations may choose an arbitrary precision, including truncating the exponent to an integer.
+> As such, fractional exponents should be avoided.
+
 ### Comments
 
 Comments are allowed in the space of any whitespace and do not affect the resulting JSONH.
