@@ -353,7 +353,7 @@ Digits can be separated by underscores (`_`). Leading or trailing underscores ar
 ```
 
 > [!NOTE]
-> Since fractional exponents (e.g. `1e3.4`) can be irrational, implementations may choose an arbitrary precision, including truncating the exponent to an integer.
+> Since numbers with fractional exponents (e.g. `1e3.4`) are often irrational, implementations may choose an arbitrary precision.
 > As such, fractional exponents should be avoided.
 
 ### Comments
