@@ -462,7 +462,7 @@ You are welcome to write a JSONH parser in a language of your choice. Raise an i
 
 | Language | Implementation | Package |
 | -------- | -------------- | ------- |
-| C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [WIP]
+| C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [NuGet](https://www.nuget.org/packages/JsonhCs)
 
 #### Highlighter Implementations
 
