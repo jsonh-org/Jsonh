@@ -1,5 +1,5 @@
 # JSONH
- 
+
 **JSON for Humans.**
 
 JSON is great. Until you miss that trailing comma... or want to use comments. What about multiline strings?
