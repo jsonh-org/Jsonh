@@ -303,7 +303,7 @@ this \, is a comma. this\
 "this , is a comma. this\n is a newline."
 ```
 
-Leading/trailing whitespace is always stripped.
+Leading and trailing whitespace is always stripped.
 
 ```jsonh
 a:   b c ,
@@ -331,7 +331,7 @@ Rational numbers are comprised of the following optional components: a sign, a f
 - If the number starts with `0o` or `0O`, every digit is octal (base-8).
 - Otherwise, every digit is decimal (base-10).
 
-Digits can be separated by underscores (`_`). Leading or trailing underscores are not allowed.
+Digits can be separated by underscores (`_`). Leading and trailing underscores are not allowed.
 
 ```jsonh
 [
