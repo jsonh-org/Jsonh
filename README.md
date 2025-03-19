@@ -456,16 +456,9 @@ Please raise an issue. Note that the format shouldn't stray too far from HJSON o
 
 #### Implementations
 
-You are welcome to write a JSONH parser in a language of your choice. Raise an issue so it can be added to the list.
-
-#### Parser Implementations
+You are welcome to write a JSONH parser or highlighter in a language of your choice. Raise an issue so it can be added to the list.
 
 | Language | Implementation | Package |
 | -------- | -------------- | ------- |
 | C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [NuGet](https://www.nuget.org/packages/JsonhCs)
-
-#### Highlighter Implementations
-
-| Editor | Implementation | Package |
-| ------ | -------------- | ------- |
 | VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [WIP]
