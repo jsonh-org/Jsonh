@@ -213,14 +213,13 @@ Items are separated with `,` or a newline. A single trailing comma is allowed.
 
 ### Named Literals
 
-Named literals are case-insensitive, but the recommended casing is below.
+There are three named literals, just like JSON.
 
 - `null` - no value (any type)
 - `true` - true (boolean)
 - `false` - false (boolean)
-- `Infinity`/`+Infinity` - positive infinity (number)
-- `-Infinity` - negative infinity (number)
-- `NaN`/`+NaN`/`-NaN` - not a number (number)
+
+Other named literals (such as `Infinity` and `NaN`) are left as quoteless strings.
 
 ### Strings
 
