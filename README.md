@@ -21,9 +21,6 @@ Since JSONH is compatible with JSON, any JSONH syntax can be represented with eq
         that: cool? # yes
     }
 
-    // brackets are optional
-    i love: pizza, ice cream, cola
-
     // use multiline strings
     haiku: '''
         Let me die in spring
@@ -153,7 +150,7 @@ Since JSONH is a superset of JSON and JSON5, all valid JSON and JSON5 is valid J
 
 Objects contain an ordered sequence of properties (`key: value`).
 
-They are optionally wrapped in braces (`{}`).
+They are wrapped in braces (`{}`).
 
 Properties are separated with `,` or a newline. A single trailing comma is allowed.
 
@@ -172,17 +169,14 @@ If two properties have the same key, the first property is replaced.
 }
 ```
 
-If not wrapped in braces, they terminate at `}`, `]` or the end of the document.
-
-> [!TIP]  
-> Keep braces for nested objects to avoid confusion.
+A braceless object can be created at the root level. It terminates at the end of the document.
 
 ```jsonh
 meal: pizza
 drink: cola
 snacks: [
-    "name": "biscuit",
-    "flavor": "chocolate"
+    "biscuit",
+    "chocolate"
 ]
 ```
 ```json
@@ -190,10 +184,8 @@ snacks: [
     "meal": "pizza",
     "drink": "cola",
     "snacks": [
-        {
-            "name": "biscuit",
-            "flavor": "chocolate"
-        }
+        "biscuit",
+        "chocolate"
     ]
 }
 ```
@@ -216,30 +208,6 @@ Items are separated with `,` or a newline. A single trailing comma is allowed.
 [
     "a",
     "b"
-]
-```
-
-If not wrapped in brackets, they terminate at `}`, `]`, a property name or the end of the document.
-
-```jsonh
-pizza,
-prosciutto
-drinks: cola, lemonade,
-ice cream,
-dessert: chocolate
-```
-```json
-[
-    "pizza",
-    "prosciutto",
-    {
-        "drinks": [
-            "cola",
-            "lemonade",
-            "ice cream"
-        ],
-        "dessert": "chocolate"
-    }
 ]
 ```
 
