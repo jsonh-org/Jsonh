@@ -142,8 +142,6 @@ However, configuration/data formats like JSONH are useful in personal projects, 
 
 ## Syntax
 
-See the syntax in [McKeeman Form](https://github.com/jsonh-org/Jsonh/blob/main/McKeemanSyntax.md).
-
 Since JSONH is a superset of JSON and JSON5, all valid JSON and JSON5 is valid JSONH.
 
 ### Objects
