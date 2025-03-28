@@ -239,7 +239,7 @@ All strings can contain escape sequences starting with `\`:
 - `\(newline)` - escaped newline (`\(newline)` = `(empty)`)
 - `\(rune)` - literal character (`\q` = `q`)
 
-#### Double-Quoted Strings / Single-Quoted Strings
+#### Quoted Strings (AKA: Double-Quoted Strings, Single-Quoted Strings)
 
 Double-quoted/single-quoted strings are wrapped in double-quotes (`"`) or single-quotes (`'`).
 
