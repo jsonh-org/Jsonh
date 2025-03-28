@@ -291,7 +291,7 @@ Quoteless strings are terminated by a newline or a symbol.
 { "text": "hello world" }
 ```
 
-Unlike other types of strings, reserved symbols (`,`, `:`, `[`, `]`, `{`, `}`, `/`, `#`, `\`) and newlines must be escaped.
+Unlike other types of strings, reserved symbols (`,`, `:`, `[`, `]`, `{`, `}`, `/`, `#`, `\`, `"`, `'`) and newlines must be escaped.
 
 ```jsonh
 this \, is a comma. this\
