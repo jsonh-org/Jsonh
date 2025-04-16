@@ -458,9 +458,17 @@ JSONH files should always end with `.jsonh`.
 
 #### Versioning
 
-JSONH uses a versioning system to ensure any changes to the syntax are properly documented.
+JSONH uses a versioning system to ensure significant changes to the syntax are properly documented.
 
 Implementations may support one or more versions of JSONH.
+
+### Recommendations
+
+The JSONH format is designed to be flexible, so you are free to ignore any usage recommendations.
+
+Nevertheless, the following practices are recommended:
+- Use UTF-8 encoding (see [UTF-8 Everywhere](http://utf8everywhere.org)).
+- Use UNIX-style line endings (`\n`).
 
 ### Contributing
 
