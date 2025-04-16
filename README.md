@@ -385,7 +385,7 @@ Line comments start with a hash (`#`) or a double-slash (`//`) and are terminate
 
 ```jsonh
 # Numbers
-3.14 # pi approximation
+3.14 // pi approximation
 ```
 ```json
 3.14
