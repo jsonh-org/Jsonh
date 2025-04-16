@@ -288,8 +288,8 @@ Otherwise, the whitespace after the last newline is stripped from the beginning 
 "hello\n  world"
 ```
 
-> [!TIP]
-> The recommended way to parse multi-quoted strings is with several forward-passes:
+> [!NOTE]
+> The recommended way for implementations to parse multi-quoted strings is with several forward-passes:
 > - **Pass 0:** read string
 > - **Condition:** skip remaining steps unless started with multiple quotes
 > - **Pass 1:** count leading whitespace -> newline
