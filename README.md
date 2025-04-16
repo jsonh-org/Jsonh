@@ -271,13 +271,14 @@ The whitespace preceding the first newline is also stripped.
 "hello\n  world"
 ```
 
-If the multi-quoted string doesn't contain a newline, no whitespace is stripped.
+If the multi-quoted string does not start with whitespace followed by a newline, no whitespace is stripped.
 
 ```jsonh
-'''  hello world  '''
+'''  hello
+world  '''
 ```
 ```json
-"  hello world  "
+"  hello\nworld  "
 ```
 
 #### Quoteless Strings (AKA: Unquoted Strings)
