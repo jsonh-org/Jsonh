@@ -253,7 +253,7 @@ world\n"
 "hello\nworld\n"
 ```
 
-#### Multi-Quoted Strings (AKA: Triple-Quoted Strings, Multi-Line Strings)
+#### Multi-Quoted Strings (AKA: Triple-Quoted Strings, Multi-Line Strings, Raw String Literals)
 
 Multi-quoted strings are wrapped in three or more double-quotes (`"""`) or single-quotes (`'''`).
 
@@ -287,6 +287,19 @@ Otherwise, the whitespace after the last newline is stripped from the beginning 
 ```json
 "hello\n  world"
 ```
+
+> [!TIP]
+> The recommended way to parse multi-quoted strings is with several forward-passes:
+> - **Pass 0:** read string
+> - **Condition:** skip remaining steps unless started with multiple quotes
+> - **Pass 1:** count leading whitespace -> newline
+> - **Condition:** skip remaining steps if pass 1 failed
+> - **Pass 2:** count trailing newline -> whitespace
+> - **Condition:** skip remaining steps if pass 2 failed
+> - **Pass 3:** strip trailing newline -> whitespace
+> - **Pass 4:** strip leading whitespace -> newline
+> - **Condition:** skip remaining steps if no trailing whitespace
+> - **Pass 5:** strip line-leading whitespace
 
 #### Quoteless Strings (AKA: Unquoted Strings)
 
