@@ -406,48 +406,45 @@ Block comments start with a slash-asterisk (`/*`) and are terminated by an aster
 
 ### Whitespace
 
-Any unicode whitespace character is considered valid whitespace.
+The following characters are valid whitespace:
+- `\u0020` (space)
+- `\u00A0` (non-breaking space)
+- `\u1680` (Ogham space mark)
+- `\u2000` (en quad)
+- `\u2001` (em quad)
+- `\u2002` (en space)
+- `\u2003` (em space)
+- `\u2004` (three-per-em space)
+- `\u2005` (four-per-em space)
+- `\u2006` (six-per-em space)
+- `\u2007` (figure space)
+- `\u2008` (punctuation space)
+- `\u2009` (thin space)
+- `\u200A` (hair space)
+- `\u202F` (narrow no-break space)
+- `\u205F` (medium mathematical space)
+- `\u3000` (ideographic space)
+- `\u2028` (line separator)
+- `\u2029` (paragraph separator)
+- `\u0009` (character tabulation / horizontal tab)
+- `\u000A` (line feed)
+- `\u000B` (line tabulation / vertical tab)
+- `\u000C` (form feed)
+- `\u000D` (carriage return)
+- `\u0085` (next line)
 
-> [!NOTE]
-> Languages that don't support unicode whitespace may only support JSON whitespace (space, tab, line feed, carriage return).
-> As such, non-JSON whitespace should be avoided.
-
-C#:
-```cs
-char.IsWhiteSpace(' ');
-```
-Ruby:
-```rb
-' '.match(/\s/)
-```
-Python:
-```py
-' '.isspace()
-```
-Lua:
-```lua
-(" "):match("%s") -- JSON whitespace only
-```
-C++:
-```cpp
-isspace(u' '); // JSON whitespace only
-```
+This corresponds to [`char.IsWhiteSpace` in .NET](https://learn.microsoft.com/en-us/dotnet/api/system.char.iswhitespace#remarks).
 
 ### Newlines
 
-The characters `\n` (line feed), `\r` (carriage return), `\r\n` (carriage return + line feed), `\u2028` (line separator) and `\u2029` (paragraph separator) are valid string line terminators.
+The following characters are valid line terminators:
+- `\n` (line feed)
+- `\r` (carriage return)
+- `\r\n` (carriage return + line feed)
+- `\u2028` (line separator)
+- `\u2029` (paragraph separator)
 
-> [!NOTE]
-> Languages that don't support unicode characters may only support JSON newlines (line feed, carriage return, carriage return + line feed).
-> As such, non-JSON newlines should be avoided.
-
-```jsonh
-"hi \
-there"
-```
-```json
-"hi there"
-```
+This corresponds to [line terminators in JSON5](https://spec.json5.org/#escapes).
 
 ### Metadata
 
