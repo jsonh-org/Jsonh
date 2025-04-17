@@ -485,5 +485,5 @@ You are welcome to write a JSONH parser or highlighter in a language of your cho
 | Language | Implementation | Package |
 | -------- | -------------- | ------- |
 | C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [![NuGet](https://img.shields.io/nuget/v/JsonhCs.svg)](https://www.nuget.org/packages/JsonhCs)
-| C++ | [JsonhCpp](https://github.com/jsonh-org/JsonhCpp) | (WIP)
+| C++ | [JsonhCpp](https://github.com/jsonh-org/JsonhCpp) | [![C++](https://img.shields.io/github/release/jsonh-org/JsonhCpp.svg?style=flat-square&label=c%2b%2b)](https://github.com/jsonh-org/JsonhCpp/releases)
 | VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/i/Joyless.jsonh-vscode)](https://marketplace.visualstudio.com/items?itemName=Joyless.jsonh-vscode)
