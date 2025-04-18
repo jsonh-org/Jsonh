@@ -1,5 +1,7 @@
 # JSONH
 
+<img src="https://github.com/jsonh-org/Jsonh/blob/main/IconUpscaled.png?raw=true" width=200>
+
 **JSON for Humans.**
 
 JSON is great. Until you miss that trailing comma... or want to use comments. What about multiline strings?
