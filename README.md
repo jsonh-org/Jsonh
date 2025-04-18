@@ -1,6 +1,4 @@
-# JSONH
-
-<img src="https://github.com/jsonh-org/Jsonh/blob/main/IconUpscaled.png?raw=true" width=200>
+<img src="https://github.com/jsonh-org/Jsonh/blob/main/IconUpscaled.png?raw=true" width=180>
 
 **JSON for Humans.**
 
