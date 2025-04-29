@@ -322,10 +322,10 @@ this \, is a comma. this\
 "this , is a comma. this\n is a newline."
 ```
 
-Leading and trailing whitespace is always stripped.
+Leading and trailing whitespace is always stripped, including escaped whitespace.
 
 ```jsonh
-a:   b c ,
+a:   b c \n,
 ```
 ```json
 {
