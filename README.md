@@ -53,6 +53,12 @@ JSON5  HJSON
 JSONH
 ```
 
+## JSONH-chan
+
+<img src="https://github.com/jsonh-org/Jsonh/blob/main/JsonhChanUpscaled.png?raw=true" width=128>
+
+*Name another format that features an anime mascot!*
+
 ## Why Should I Use This?
 
 ### Over JSON
