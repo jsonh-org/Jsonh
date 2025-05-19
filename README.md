@@ -351,10 +351,13 @@ Rational numbers are comprised of the following optional components: a sign, a f
 - The decimal point can be leading (`.5`) or trailing (`5.`).
 - The exponent starts with `e` or `E` and an optional sign (`+` or `-`).
 
-- If the number starts with `0x` or `0X`, every digit is hexadecimal (base-16).
-- If the number starts with `0b` or `0B`, every digit is binary (base-2).
-- If the number starts with `0o` or `0O`, every digit is octal (base-8).
-- Otherwise, every digit is decimal (base-10).
+By default, every digit is decimal (base-10). If the number starts with a base specifier, every digit is in that base:
+- `0x` or `0X` -> hexadecimal (base-16)
+- `0b` or `0B` -> binary (base-2)
+- `0o` or `0O` -> octal (base-8)
+
+> [!NOTE]
+> Hexadecimal numbers cannot have exponents (`e`) since the exponent will be parsed as a hexadecimal digit.
 
 Digits can be separated by underscores (`_`). Leading and trailing underscores are not allowed.
 
