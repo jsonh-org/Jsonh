@@ -72,7 +72,7 @@ While JSON is designed to be readable for humans, it's secondary to communicatio
 }
 ```
 
-No comments, no trailing commas, no multiline strings, no floating-point literals or hexadecimal. It's as basic as it gets, and can leave you desiring something more.
+No comments, no trailing commas, no multiline strings, no floating-point literals or hexadecimal. It's as raw as it gets, and leaves something to be desired.
 
 ### Over HJSON
 
@@ -85,10 +85,10 @@ HJSON makes a number of adventurous improvements to JSON. Among quality-of-life 
 }
 ```
 
-Unfortunately, HJSON's elegance can be undermined by a number of design pitfalls that are too late to change. For example:
+However, HJSON's elegance is undermined by a number of design pitfalls that are too late to change. For example:
 - Commas at the end of quoteless strings are parsed as part of the string.
-- Multiline strings are very difficult to parse due to an oversight.
-- No way to represent Infinity or NaN.
+- Numbers cannot be separated with underscores (e.g. `100_000`).
+- Not backwards-compatible with JSON5.
 
 JSONH should be considered as "HJSON v2".
 
@@ -103,10 +103,10 @@ JSON5 sticks much closer to JSON than other formats. It mainly adds things like 
 }
 ```
 
-Since its primary purpose is compatibility with ECMAScript, it's missing some desirable features like:
-- Multiline strings.
-- Omitted commas.
-- Omitted root braces.
+Since its primary purpose is compatibility with ECMAScript, it's missing desirable features. For example:
+- No multi-quoted strings.
+- Commas cannot be omitted in arrays and objects.
+- The root braces cannot be omitted.
 
 ### Over YAML
 
@@ -121,8 +121,9 @@ Instead of building upon the JSON syntax, YAML provides a huge number of feature
 - Indentation-based arrays and objects, with confusion on when or how much indentation is necessary.
 - Arbitrary dashes to signify the beginning of an object.
 - Multiline string indicators like `>`, `|`, `>-`, `>+`, `|+` (is this readable??)
+- YAML is [not even a superset of JSON](https://www.patrickstevens.co.uk/posts/2024-03-14-yaml-superset-json)!
 
-Safe to say, YAML can't be understood by non-YAML programmers.
+Safe to say, YAML is not easily to understand.
 JSONH is much more straightforward and still has all the features you need to express yourself.
 
 ### Over TOML
@@ -136,7 +137,7 @@ age = 20
 ```
 
 Whereas JSON is hierarchical and unambiguous, it's not immediately clear what the attributes in TOML refer to.
-Additionally, if you want values as objects, you end up using JSON anyway, making the TOML syntax inconsistent.
+Additionally, if you want values that are objects, you end up using JSON anyway, making the TOML syntax inconsistent.
 
 ### Objection!
 
