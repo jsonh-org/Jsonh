@@ -492,10 +492,10 @@ Please raise an issue. Note that the format shouldn't stray too far from HJSON o
 
 You are welcome to write a JSONH parser or highlighter in a language of your choice. Raise an issue so it can be added to the list.
 
-| Language | Implementation | Package |
-| -------- | -------------- | ------- |
-| VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/i/Joyless.jsonh-vscode)](https://marketplace.visualstudio.com/items?itemName=Joyless.jsonh-vscode)
-| CLI | [JsonhCli](https://github.com/jsonh-org/JsonhCli) | [![C#](https://img.shields.io/github/release/jsonh-org/JsonhCli.svg?style=flat-square&label=c%23)](https://github.com/jsonh-org/JsonhCli/releases)
-| C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [![NuGet](https://img.shields.io/nuget/v/JsonhCs.svg)](https://www.nuget.org/packages/JsonhCs)
-| C++ | [JsonhCpp](https://github.com/jsonh-org/JsonhCpp) | [![C++](https://img.shields.io/github/release/jsonh-org/JsonhCpp.svg?style=flat-square&label=c%2b%2b)](https://github.com/jsonh-org/JsonhCpp/releases)
-| GDExtension | [JsonhGdextension](https://github.com/jsonh-org/JsonhGdextension) | [![Godot Asset Library](https://img.shields.io/github/v/release/jsonh-org/JsonhGdextension.svg?style=flat-square&label=Godot%20Asset%20Library&logo=godotengine)](https://godotengine.org/asset-library/asset/3950)
+| Type | Name | Package | Description |
+| -------- | -------------- | ------- | ---- |
+| VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/i/Joyless.jsonh-vscode)](https://marketplace.visualstudio.com/items?itemName=Joyless.jsonh-vscode) | Syntax highlighter
+| C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [![NuGet](https://img.shields.io/nuget/v/JsonhCs.svg)](https://www.nuget.org/packages/JsonhCs) | Parser
+| C++ | [JsonhCpp](https://github.com/jsonh-org/JsonhCpp) | [![C++](https://img.shields.io/github/release/jsonh-org/JsonhCpp.svg?style=flat-square&label=c%2b%2b)](https://github.com/jsonh-org/JsonhCpp/releases) | Parser
+| GDExtension | [JsonhGdextension](https://github.com/jsonh-org/JsonhGdextension) | [![Godot Asset Library](https://img.shields.io/github/v/release/jsonh-org/JsonhGdextension.svg?style=flat-square&label=Godot%20Asset%20Library&logo=godotengine)](https://godotengine.org/asset-library/asset/3950) | Parser using JsonhCpp
+| CLI | [JsonhCli](https://github.com/jsonh-org/JsonhCli) | [![C#](https://img.shields.io/github/release/jsonh-org/JsonhCli.svg?style=flat-square&label=c%23)](https://github.com/jsonh-org/JsonhCli/releases) | Command line interface using JsonhCs
