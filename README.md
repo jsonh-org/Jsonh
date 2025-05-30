@@ -344,13 +344,13 @@ a:   b c \n,
 
 Numbers represent a numeric value.
 
-#### Rational Numbers
-
-Rational numbers are comprised of the following optional components: a sign, a fractional number, and a fractional exponent.
+They are comprised of the following optional components: a sign, a fractional mantissa, and a fractional exponent.
 
 - The sign can be `+` or `-`.
 - The decimal point can be leading (`.5`) or trailing (`5.`).
 - The exponent starts with `e` or `E` and an optional sign (`+` or `-`).
+- Digits can be separated by one-or-more underscores (`_`).
+  - Leading and trailing underscores are not allowed.
 
 By default, every digit is decimal (base-10). If the number starts with a base specifier, every digit is in that base:
 - `0x` or `0X` -> hexadecimal (base-16)
@@ -359,8 +359,6 @@ By default, every digit is decimal (base-10). If the number starts with a base s
 
 > [!NOTE]
 > Hexadecimal numbers cannot have exponents (`e`) since the exponent will be parsed as a hexadecimal digit.
-
-Digits can be separated by underscores (`_`). Leading and trailing underscores are not allowed.
 
 ```jsonh
 [
