@@ -358,7 +358,8 @@ By default, every digit is decimal (base-10). If the number starts with a base s
 - `0o` or `0O` -> octal (base-8)
 
 > [!NOTE]
-> Hexadecimal numbers cannot have exponents (`e`) since the exponent will be parsed as a hexadecimal digit.
+> Hexadecimal numbers cannot have exponents (`e`) since the exponent would be parsed as a hexadecimal digit.
+> Using `+`/`-` (as in `0x5e+3`) is also not allowed since it would be too difficult to parse.
 
 ```jsonh
 [
