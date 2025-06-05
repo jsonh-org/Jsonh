@@ -344,18 +344,35 @@ a:   b c \n,
 
 Numbers represent a numeric value.
 
-They are comprised of the following optional components: a sign, a fractional mantissa, and a fractional exponent.
+They are comprised of the following components:
+- A sign (`+` or `-`)
+  - Optional
+- A base specifier (`0x` or `0X` or `0b` or `0B` or `0o` or `0O`)
+  - Optional
+- An integer
+  - Optional if followed by dot integer
+- A dot (`.`)
+  - Optional
+- An integer
+  - Optional if preceded by integer dot
+- An exponent (`e` or `E`)
+  - Optional
+- A sign (`+` or `-`)
+  - Optional if not hexadecimal
+- An integer
+  - Optional if followed by dot integer
+- A dot (`.`)
+  - Optional
+- An integer
+  - Optional if preceded by integer dot
 
-- The sign can be `+` or `-`.
-- The decimal point can be leading (`.5`) or trailing (`5.`).
-- The exponent starts with `e` or `E` and an optional sign (`+` or `-`).
-- Digits can be separated by one-or-more underscores (`_`).
-  - Leading and trailing underscores are not allowed.
-
-By default, every digit is decimal (base-10). If the number starts with a base specifier, every digit is in that base:
+By default, every digit is decimal (base-10). If a base is specified, every digit is in that base:
 - `0x` or `0X` -> hexadecimal (base-16)
 - `0b` or `0B` -> binary (base-2)
 - `0o` or `0O` -> octal (base-8)
+
+Digits can be separated by one-or-more underscores (`_`).
+  - Underscores must be between digits or base specifiers or underscores.
 
 > [!NOTE]
 > Exponents in hexadecimal numbers must be followed by `+` or `-` (e.g. `0x5e+3`), since otherwise the exponent is parsed as a hexadecimal digit.
