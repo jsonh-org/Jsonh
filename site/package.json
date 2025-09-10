@@ -1,18 +1,16 @@
 {
-  "name": "site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "jsonh-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "watch": "tsc --watch"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "jsonh-ts": "^1.1.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2"
   }
 }

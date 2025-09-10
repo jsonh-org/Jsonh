@@ -1,0 +1,56 @@
+body {
+    padding: 50px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #58a6ff;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    background-color: #161b22;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 10px;
+    resize: vertical;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.3);
+    background-color: #0d1117;
+}
+
+.container {
+    max-width: 800px;
+}
+
+a.github-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a.github-link:hover {
+    text-decoration: underline;
+}
+
+.form-check {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-left: 5px;
+}

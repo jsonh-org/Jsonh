@@ -1,38 +1,25 @@
 {
-    "compilerOptions": {
-        // File Layout
-        "outDir": "./build",
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
 
-        // Environment Settings
-        "module": "commonjs",
-        "target": "es2022",
-        "lib": ["ES2022", "DOM"],
-        "types": [],
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
 
-        // Other Outputs
-        "sourceMap": true,
-        "declaration": true,
-        "declarationMap": true,
-
-        // Stricter Typechecking Options
-        "noUncheckedIndexedAccess": true,
-        "exactOptionalPropertyTypes": true,
-
-        // Style Options
-        "noImplicitReturns": true,
-        "noImplicitOverride": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "noPropertyAccessFromIndexSignature": true,
-
-        // Recommended Options
-        "strict": true,
-        "jsx": "react-jsx",
-        "verbatimModuleSyntax": true,
-        "isolatedModules": true,
-        "noUncheckedSideEffectImports": true,
-        "moduleDetection": "force",
-        "skipLibCheck": true,
-    },
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src"]
 }

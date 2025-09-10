@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Custom Language → JSON</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body { padding: 50px; background-color: #f7f9fc; }
-    textarea { width: 100%; height: 200px; margin-bottom: 20px; font-family: monospace; }
-    h1 { margin-bottom: 30px; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Custom Language → JSON Converter</h1>
-    <textarea id="input" placeholder="Write your custom language here..."></textarea>
-    <textarea id="output" placeholder="JSON output..." readonly></textarea>
-    <button class="btn btn-primary" onclick="convert()">Convert</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSONH Site</title>
 
-  <script type="module" src="./dist/main.js"></script>
-</body>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="index.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <h1>JSONH to JSON Converter</h1>
+
+      <!-- JSONH Input -->
+      <h3>JSONH </h3>
+      <br/>
+
+      <textarea id="input" placeholder="Enter JSONH input..."></textarea>
+
+      <!-- JSON Output -->
+      <h3>JSON</h3>
+      <br/>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="pretty-print">
+        <label class="form-check-label" for="pretty-print">Pretty Print</label>
+      </div>
+
+      <textarea id="output" placeholder="See JSON output..." readonly></textarea>
+
+      <a href="https://github.com/jsonh-org/Jsonh" target="_blank" class="github-link">
+        View JSONH on GitHub
+      </a>
+    </div>
+
+    <!-- Vite + TypeScript entry -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
