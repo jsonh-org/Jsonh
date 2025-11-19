@@ -260,7 +260,7 @@ Verbatim strings start with `@`. They ignore escape sequences:
 [
     "a\\b\\c",
     "a\\b\\c",
-    "a\\b\\c",
+    "a\\b\\c"
 ]
 ```
 
