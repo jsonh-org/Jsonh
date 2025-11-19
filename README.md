@@ -526,6 +526,16 @@ Nevertheless, the following practices are recommended:
 - Use UTF-8 encoding (see [UTF-8 Everywhere](http://utf8everywhere.org)).
 - Use UNIX-style line endings (`\n`).
 
+### Version History
+
+#### JSONH V2
+
+Added verbatim strings (`@a\b\c`) and nestable block comments (`/=* *=/`).
+
+#### JSONH V1
+
+The original language specification.
+
 ### Contributing
 
 Contributions are welcome.
