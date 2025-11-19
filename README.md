@@ -248,6 +248,22 @@ All strings can contain escape sequences starting with `\`:
 - `\(newline)` - escaped newline (`\(newline)` = `(empty)`)
 - `\(rune)` - literal character (`\q` = `q`)
 
+Verbatim strings start with `@`. They ignore escape sequences:
+```jsonh
+[
+    @a\b\c,
+    @"a\b\c",
+    @"""a\b\c""",
+]
+```
+```json
+[
+    "a\\b\\c",
+    "a\\b\\c",
+    "a\\b\\c",
+]
+```
+
 #### Quoted Strings (AKA: Double-Quoted Strings, Single-Quoted Strings)
 
 Double-quoted/single-quoted strings are wrapped in double-quotes (`"`) or single-quotes (`'`).
@@ -321,7 +337,7 @@ Quoteless strings are terminated by a newline or a symbol.
 { "text": "hello world" }
 ```
 
-Unlike other types of strings, reserved symbols (`\`, `,`, `:`, `[`, `]`, `{`, `}`, `/`, `#`, `"`, `'`) and newlines must be escaped.
+Unlike other types of strings, reserved symbols (`\`, `,`, `:`, `[`, `]`, `{`, `}`, `/`, `#`, `"`, `'`, `@`) and newlines must be escaped.
 
 ```jsonh
 this \, is a comma. this\
