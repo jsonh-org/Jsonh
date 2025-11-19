@@ -514,9 +514,9 @@ JSONH files should always end with `.jsonh`.
 
 #### Versioning
 
-JSONH uses a versioning system to ensure significant changes to the syntax are properly documented.
+JSONH uses a `MAJOR.MINOR` versioning system to ensure changes to the syntax are properly documented.
 
-Implementations may support one or more versions of JSONH.
+Implementations may support one or more major versions of JSONH.
 
 ### Recommendations
 
