@@ -502,23 +502,23 @@ The following characters are valid line terminators:
 
 This corresponds to [line terminators in JSON5](https://spec.json5.org/#escapes).
 
-### Metadata
+## Metadata
 
-#### Byte Encoding
+### Byte Encoding
 
 JSONH can be written in any unicode encoding (UTF-8, UTF-16, UTF-32).
 
-#### File Extension
+### File Extension
 
 JSONH files should always end with `.jsonh`.
 
-#### Versioning
+### Versioning
 
 JSONH uses a `MAJOR.MINOR` versioning system to ensure changes to the syntax are properly documented.
 
 Implementations may support one or more major versions of JSONH.
 
-### Recommendations
+## Recommendations
 
 The JSONH format is designed to be flexible, so you are free to ignore any usage recommendations.
 
@@ -526,25 +526,25 @@ Nevertheless, the following practices are recommended:
 - Use UTF-8 encoding (see [UTF-8 Everywhere](http://utf8everywhere.org)).
 - Use UNIX-style line endings (`\n`).
 
-### Version History
+## Version History
 
-#### JSONH V2
+### JSONH V2
 
 Added verbatim strings (`@a\b\c`) and nestable block comments (`/=* *=/`).
 
-#### JSONH V1
+### JSONH V1
 
 The original language specification.
 
-### Contributing
+## Contributing
 
 Contributions are welcome.
 
-#### Suggestions
+### Suggestions
 
 Please raise an issue. Note that the format shouldn't stray too far from HJSON or JSON5 and should be directly translatable to JSON.
 
-#### Implementations
+### Implementations
 
 You are welcome to write a JSONH parser or highlighter in a language of your choice. Raise an issue so it can be added to the list.
 
