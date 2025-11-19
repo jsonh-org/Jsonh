@@ -431,6 +431,19 @@ Block comments start with a slash-asterisk (`/*`) and are terminated by an aster
 [  ]
 ```
 
+Nestable block comments have one or more equal-signs (`=`) between the slash (`/`) and asterisk (`*`):
+
+```jsonh
+/==*
+    /* Hello */
+    /=* World *=/
+*==/
+0
+```
+```json
+0
+```
+
 ### Whitespace
 
 The following characters are valid whitespace:
