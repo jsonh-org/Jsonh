@@ -1,4 +1,4 @@
-import { JsonhReader } from "jsonh-ts";
+import { JsonhReader, JsonhReaderOptions } from "jsonh-ts";
 
 const input = document.getElementById('input') as HTMLTextAreaElement;
 const output = document.getElementById('output') as HTMLTextAreaElement;
@@ -10,7 +10,9 @@ function convert(): void {
         return;
     }
 
-    let elementResult = JsonhReader.parseElementFromString(input.value);
+    let elementResult = JsonhReader.parseElementFromString(input.value, new JsonhReaderOptions({
+        parseSingleElement: true,
+    }));
     if (elementResult.isError) {
         output.value = `Error: ${elementResult.error.message}`;
         return;
