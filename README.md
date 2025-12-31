@@ -548,6 +548,9 @@ Please raise an issue. Note that the format shouldn't stray too far from HJSON o
 
 You are welcome to write a JSONH parser or highlighter in a language of your choice. Raise an issue so it can be added to the list.
 
+> [!NOTE]
+> The official parser implementations (JsonhCs, JsonhCpp, JsonhTs, JsonhPy) are all implemented as similarly as possible. This means bugs can be easily fixed across implementations.
+
 | Type | Name | Package | Description |
 | -------- | -------------- | ------- | ---- |
 | VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [![Visual Studio Marketplace](https://img.shields.io/github/release/jsonh-org/JsonhVscode.svg?label=vs%20marketplace)](https://marketplace.visualstudio.com/items?itemName=Joyless.jsonh-vscode) | Syntax highlighter
