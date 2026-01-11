@@ -23,29 +23,27 @@ textarea {
     resize: vertical;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
 }
-
-textarea:focus {
-    outline: none;
-    border-color: #58a6ff;
-    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.3);
-    background-color: #0d1117;
-}
+    textarea:focus {
+        outline: none;
+        border-color: #58a6ff;
+        box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.3);
+        background-color: #0d1117;
+    }
 
 .container {
     max-width: 800px;
 }
 
-a.github-link {
+a.source-link {
     display: inline-block;
     margin-top: 20px;
     color: #58a6ff;
     text-decoration: none;
     font-weight: 500;
 }
-
-a.github-link:hover {
-    text-decoration: underline;
-}
+    a.source-link:hover {
+        text-decoration: underline;
+    }
 
 .form-check {
     margin-bottom: 20px;
@@ -53,4 +51,44 @@ a.github-link:hover {
 
 label {
     margin-left: 5px;
+}
+
+select {
+    padding: 5px;
+
+    background-color: #161b22;
+    color: #c9d1d9;
+
+    border: 1px solid #30363d;
+    border-radius: 8px;
+}
+    select:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.3);
+        background-color: #0d1117;
+    }
+    select option {
+        background-color: #161b22;
+        color: #c9d1d9;
+    }
+
+.form-check {
+    margin-bottom: 20px;
+    padding: 10px;
+
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.form-check-input {
+    margin: 0 !important;
+}
+.form-check-label {
+    margin: 0;
+    color: #c9d1d9;
+    cursor: pointer;
 }
