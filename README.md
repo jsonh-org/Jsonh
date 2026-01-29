@@ -525,6 +525,7 @@ The JSONH format is designed to be flexible, so you are free to ignore any usage
 Nevertheless, the following practices are recommended:
 - Use UTF-8 encoding (see [UTF-8 Everywhere](http://utf8everywhere.org)).
 - Use UNIX-style line endings (`\n`).
+- Use four-space indents.
 
 ## Version History
 
