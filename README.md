@@ -313,7 +313,7 @@ Otherwise, the whitespace after the last newline is stripped from the beginning 
 "hello\n  world"
 ```
 
-> [!NOTE]
+> [!TIP]
 > The recommended way for implementations to parse multi-quoted strings is with several forward-passes:
 > - **Pass 0:** read string
 > - **Condition:** skip remaining steps unless started with multiple quotes
