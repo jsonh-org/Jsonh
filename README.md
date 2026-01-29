@@ -528,11 +528,11 @@ Nevertheless, the following practices are recommended:
 
 ## Version History
 
-### JSONH V2
+### JSONH V2 - 2025/11/19
 
 Added verbatim strings (`@a\b\c`) and nestable block comments (`/=* *=/`).
 
-### JSONH V1
+### JSONH V1 - 2025/03/19
 
 The original language specification.
 
