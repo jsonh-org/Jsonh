@@ -633,15 +633,13 @@ The original language specification.
 
 ## Contributing
 
-Contributions are welcome.
-
 ### Suggestions
 
-Please raise an issue. Note that the format shouldn't stray too far from HJSON or JSON5 and should be directly translatable to JSON.
+Since the language is now stable, language suggestions are unlikely to be accepted. If you would like to suggest a change anyway, please raise an issue. Note that the format shouldn't stray too far from HJSON or JSON5, and must be directly translatable to JSON.
 
 ### Implementations
 
-You are welcome to write a JSONH parser or highlighter in a language of your choice. Raise an issue so it can be added to the list.
+You are welcome to write a JSONH parser or highlighter in a language of your choice. Please raise an issue so it can be added to the list.
 
 > [!TIP]
 > The official parser implementations are implemented as similarly as possible, which means bugs can be easily fixed across implementations. The reference implementation is [JsonhCs](https://github.com/jsonh-org/JsonhCs).
