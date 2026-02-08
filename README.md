@@ -518,14 +518,108 @@ JSONH uses a `MAJOR.MINOR` versioning system to ensure changes to the syntax are
 
 Implementations may support one or more major versions of JSONH.
 
-## Recommendations
+## Style Guide
 
-The JSONH format is designed to be flexible, so you are free to ignore any usage recommendations.
+The JSONH format is intended to be flexible, so feel free to ignore any recommendations.
 
-Nevertheless, the following practices are recommended:
+This style guide is a suggestion for writing readable JSONH.
+
+### General
+
 - Use UTF-8 encoding (see [UTF-8 Everywhere](http://utf8everywhere.org)).
 - Use UNIX-style line endings (`\n`).
-- Use four-space indents.
+- Use ASCII spaces (` `).
+- Use four spaces for indents.
+
+### Objects
+
+- Use the same-line opening style.
+  ```jsonh
+  a: {
+      b: c
+  }
+  ```
+
+- Avoid commas between properties on multiple lines.
+  ```jsonh
+  {
+      a: b
+      c: d
+  }
+  ```
+
+- Avoid braces around the root object.
+  ```jsonh
+  a: b
+  ```
+
+### Arrays
+
+- Use the same-line opening style.
+  ```jsonh
+  a: [
+      b
+  ]
+  ```
+
+- Avoid commas between items on multiple lines.
+  ```jsonh
+  [
+      a
+      b
+  ]
+  ```
+
+### Strings
+
+- Use quoteless strings for identifiers.
+  ```jsonh
+  name: lum_invader
+  ```
+
+- Use double-quoted strings for single-line strings.
+  ```jsonh
+  name: "Lum Invader"
+  ```
+
+- Use multi-quoted strings with double-quotes for multi-line strings. Use the same-line opening style and one extra indent.
+  ```jsonh
+  name: """
+      Lum
+      Invader
+      """
+  ```
+
+### Numbers
+
+- Avoid leading/trailing decimal points.
+  ```jsonh
+  1.0
+  ```
+
+- Use underscores between groups of 3 digits.
+  ```jsonh
+  1_000_000
+  ```
+
+- Use lowercase base specifiers.
+  ```jsonh
+  0b1
+  ```
+
+### Comments
+
+- Use line-style comments for single-line comments.
+  ```jsonh
+  // Line comment
+  ```
+
+- Use block-style comments for multi-line comments.
+  ```jsonh
+  /*
+      Block comment
+  */
+  ```
 
 ## Version History
 
