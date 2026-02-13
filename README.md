@@ -652,4 +652,4 @@ You are welcome to write a JSONH parser or highlighter in a language of your cho
 | TypeScript<br/>JavaScript | [JsonhTs](https://github.com/jsonh-org/JsonhTs) | [![NPM](https://img.shields.io/npm/v/jsonh-ts.svg)](https://www.npmjs.com/package/jsonh-ts) | Parser
 | Python | [JsonhPy](https://github.com/jsonh-org/JsonhPy) | [![PyPI](https://img.shields.io/pypi/v/JsonhPy.svg)](https://pypi.python.org/pypi/JsonhPy) | Parser
 | GDExtension | [JsonhGdextension](https://github.com/jsonh-org/JsonhGdextension) | [![Godot Asset Library](https://img.shields.io/github/v/release/jsonh-org/JsonhGdextension.svg?label=Godot%20Asset%20Library&logo=godotengine)](https://godotengine.org/asset-library/asset/3950) | Parser using JsonhCpp
-| CLI | [JsonhCli](https://github.com/jsonh-org/JsonhCli) | [![C#](https://img.shields.io/github/release/jsonh-org/JsonhCli.svg?label=c%23)](https://github.com/jsonh-org/JsonhCli/releases) | Command line interface using JsonhCs
+| CLI | [JsonhCli](https://github.com/jsonh-org/JsonhCli) | [![NuGet](https://img.shields.io/nuget/v/JsonhCli.svg)](https://www.nuget.org/packages/JsonhCli) | Command line interface using JsonhCs
