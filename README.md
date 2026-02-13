@@ -138,7 +138,7 @@ name = "John Doe"
 age = 20
 ```
 
-Whereas JSON is hierarchical and unambiguous, it's not immediately clear what the attributes in TOML refer to.
+Whereas JSON is hierarchical and unambiguous, it's not immediately clear what the attributes in TOML refer to (especially double-bracket attributes like `[[example]]`).
 Additionally, if you want values that are objects, you end up using JSON anyway, making the TOML syntax inconsistent.
 
 ### Objection!
@@ -155,11 +155,11 @@ Since JSONH is a superset of JSON and JSON5, all valid JSON and JSON5 is valid J
 
 ### Objects
 
-Objects contain an ordered sequence of properties (`key: value`).
+Objects contain a sequence of properties (`key: value`).
 
 They are wrapped in braces (`{}`).
 
-Properties are separated with `,` or a newline. A single trailing comma is allowed.
+Properties are separated with a comma (`,`) or a newline. A single trailing comma is allowed.
 
 If two properties have the same key, the first property is replaced.
 
@@ -203,7 +203,7 @@ Arrays contain an ordered sequence of items.
 
 They are wrapped in brackets (`[]`).
 
-Items are separated with `,` or a newline. A single trailing comma is allowed.
+Items are separated with a comma (`,`) or a newline. A single trailing comma is allowed.
 
 ```jsonh
 [
@@ -266,7 +266,7 @@ Verbatim strings start with `@`. They ignore escape sequences:
 
 #### Quoted Strings (AKA: Double-Quoted Strings, Single-Quoted Strings)
 
-Double-quoted/single-quoted strings are wrapped in double-quotes (`"`) or single-quotes (`'`).
+Quoted strings are wrapped in double-quotes (`"`) or single-quotes (`'`).
 
 They can contain newlines.
 
