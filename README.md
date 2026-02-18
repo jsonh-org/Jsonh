@@ -282,8 +282,26 @@ world\n"
 
 Multi-quoted strings are wrapped in three or more double-quotes (`"""`) or single-quotes (`'''`).
 
-The first (whitespace -> newline) and last (newline -> whitespace) are stripped.
-If either are not present, no whitespace is stripped.
+If the string starts with (whitespace -> newline) and ends with (newline -> whitespace), the whitespace after the last newline is stripped from the beginning of each line, including escaped whitespace/newlines.
+```jsonh
+   """
+  hello
+    world
+  """
+```
+```json
+"hello\n  world"
+```
+```jsonh
+   """
+  hello\n   world
+  """
+```
+```json
+"hello\n world"
+```
+
+Otherwise, no whitespace is stripped.
 
 ```jsonh
 """
@@ -299,18 +317,6 @@ If either are not present, no whitespace is stripped.
 ```
 ```json
 "  hello world\n  "
-```
-
-Otherwise, the whitespace after the last newline is stripped from the beginning of each line.
-
-```jsonh
-   """
-  hello
-    world
-  """
-```
-```json
-"hello\n  world"
 ```
 
 > [!TIP]
