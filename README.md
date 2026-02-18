@@ -647,16 +647,18 @@ Since the language is now stable, language suggestions are unlikely to be accept
 
 You are welcome to write a JSONH parser or highlighter in a language of your choice. Please raise an issue so it can be added to the list.
 
-> [!TIP]
-> Parsers marked with a star (⭐) are the official reference implementations. They are implemented as similarly as possible, which means bugs can be easily fixed across implementations. However, they may not be the fastest available parsers.
+Categories:
+- ⭐ These are the official reference implementations. They are implemented as similarly as possible, which means bugs can be easily fixed across implementations. However, they may not be the fastest available parsers.
+- 🍬 These are official extra implementations. They often wrap around the reference implementations.
+- ❤️ These are unofficial extra implementations. They are provided by the community.
 
-| Type | Name | Package | Description |
-| -------- | -------------- | ------- | ---- |
-| C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [![NuGet](https://img.shields.io/nuget/v/JsonhCs.svg)](https://www.nuget.org/packages/JsonhCs) | Parser ⭐
-| C++ | [JsonhCpp](https://github.com/jsonh-org/JsonhCpp) | [![C++](https://img.shields.io/github/release/jsonh-org/JsonhCpp.svg?label=c%2b%2b)](https://github.com/jsonh-org/JsonhCpp/releases) | Parser ⭐
-| TypeScript<br/>JavaScript | [JsonhTs](https://github.com/jsonh-org/JsonhTs) | [![NPM](https://img.shields.io/npm/v/jsonh-ts.svg)](https://www.npmjs.com/package/jsonh-ts) | Parser ⭐
-| Python | [JsonhPy](https://github.com/jsonh-org/JsonhPy) | [![PyPI](https://img.shields.io/pypi/v/JsonhPy.svg)](https://pypi.python.org/pypi/JsonhPy) | Parser ⭐
-| Rust | [JsonhRs](https://github.com/jsonh-org/JsonhRs) | WIP | Parser ⭐
-| VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [![Visual Studio Marketplace](https://img.shields.io/github/release/jsonh-org/JsonhVscode.svg?label=vs%20marketplace)](https://marketplace.visualstudio.com/items?itemName=Joyless.jsonh-vscode) | Highlighter & LSP using JsonhTs
-| GDExtension | [JsonhGdextension](https://github.com/jsonh-org/JsonhGdextension) | [![Godot Asset Library](https://img.shields.io/github/v/release/jsonh-org/JsonhGdextension.svg?label=Godot%20Asset%20Library&logo=godotengine)](https://godotengine.org/asset-library/asset/3950) | Parser using JsonhCpp
-| CLI | [JsonhCli](https://github.com/jsonh-org/JsonhCli) | [![NuGet](https://img.shields.io/nuget/v/JsonhCli.svg)](https://www.nuget.org/packages/JsonhCli) | Command Line Interface using JsonhCs
+| Type | Name | Package | Category | Description |
+| --- | --- | --- | --- | --- |
+| C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [![NuGet](https://img.shields.io/nuget/v/JsonhCs.svg)](https://www.nuget.org/packages/JsonhCs) | ⭐ | Parser
+| C++ | [JsonhCpp](https://github.com/jsonh-org/JsonhCpp) | [![C++](https://img.shields.io/github/release/jsonh-org/JsonhCpp.svg?label=c%2b%2b)](https://github.com/jsonh-org/JsonhCpp/releases) | ⭐ | Parser
+| TypeScript<br/>JavaScript | [JsonhTs](https://github.com/jsonh-org/JsonhTs) | [![NPM](https://img.shields.io/npm/v/jsonh-ts.svg)](https://www.npmjs.com/package/jsonh-ts) | ⭐ | Parser
+| Python | [JsonhPy](https://github.com/jsonh-org/JsonhPy) | [![PyPI](https://img.shields.io/pypi/v/JsonhPy.svg)](https://pypi.python.org/pypi/JsonhPy) | ⭐ | Parser
+| Rust | [JsonhRs](https://github.com/jsonh-org/JsonhRs) | WIP | ⭐ | Parser
+| VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [![Visual Studio Marketplace](https://img.shields.io/github/release/jsonh-org/JsonhVscode.svg?label=vs%20marketplace)](https://marketplace.visualstudio.com/items?itemName=Joyless.jsonh-vscode) | 🍬 | Highlighter & LSP using JsonhTs
+| GDExtension | [JsonhGdextension](https://github.com/jsonh-org/JsonhGdextension) | [![Godot Asset Library](https://img.shields.io/github/v/release/jsonh-org/JsonhGdextension.svg?label=Godot%20Asset%20Library&logo=godotengine)](https://godotengine.org/asset-library/asset/3950) | 🍬 | Parser using JsonhCpp
+| CLI | [JsonhCli](https://github.com/jsonh-org/JsonhCli) | [![NuGet](https://img.shields.io/nuget/v/JsonhCli.svg)](https://www.nuget.org/packages/JsonhCli) | 🍬 | Command Line Interface using JsonhCs
