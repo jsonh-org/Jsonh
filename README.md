@@ -658,7 +658,7 @@ Categories:
 | C++ | [JsonhCpp](https://github.com/jsonh-org/JsonhCpp) | [![C++](https://img.shields.io/github/release/jsonh-org/JsonhCpp.svg?label=c%2b%2b)](https://github.com/jsonh-org/JsonhCpp/releases) | ⭐ | Parser
 | TypeScript<br/>JavaScript | [JsonhTs](https://github.com/jsonh-org/JsonhTs) | [![NPM](https://img.shields.io/npm/v/jsonh-ts.svg)](https://www.npmjs.com/package/jsonh-ts) | ⭐ | Parser
 | Python | [JsonhPy](https://github.com/jsonh-org/JsonhPy) | [![PyPI](https://img.shields.io/pypi/v/JsonhPy.svg)](https://pypi.python.org/pypi/JsonhPy) | ⭐ | Parser
-| Rust | [JsonhRs](https://github.com/jsonh-org/JsonhRs) | WIP | ⭐ | Parser
+| Rust | [JsonhRs](https://github.com/jsonh-org/JsonhRs) | [![crates.io](https://img.shields.io/crates/v/jsonh_rs.svg)](https://crates.io/crates/jsonh_rs) | ⭐ | Parser
 | VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [![Visual Studio Marketplace](https://img.shields.io/github/release/jsonh-org/JsonhVscode.svg?label=vs%20marketplace)](https://marketplace.visualstudio.com/items?itemName=Joyless.jsonh-vscode) | 🍬 | Highlighter & LSP using JsonhTs
 | GDExtension | [JsonhGdextension](https://github.com/jsonh-org/JsonhGdextension) | [![Godot Asset Library](https://img.shields.io/github/v/release/jsonh-org/JsonhGdextension.svg?label=Godot%20Asset%20Library&logo=godotengine)](https://godotengine.org/asset-library/asset/3950) | 🍬 | Parser using JsonhCpp
 | CLI | [JsonhCli](https://github.com/jsonh-org/JsonhCli) | [![NuGet](https://img.shields.io/nuget/v/JsonhCli.svg)](https://www.nuget.org/packages/JsonhCli) | 🍬 | Command Line Interface using JsonhCs
