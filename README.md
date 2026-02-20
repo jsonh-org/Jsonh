@@ -395,7 +395,7 @@ By default, every digit is decimal (base-10). If a base is specified, every digi
 - `0b` or `0B` -> binary (base-2)
 - `0o` or `0O` -> octal (base-8)
 
-Digits can be separated by one-or-more underscores (`_`).
+Digits can be separated by one-or-more underscores (`_`) for readability.
   - Underscores must be between digits or base specifiers or underscores.
 
 > [!NOTE]
