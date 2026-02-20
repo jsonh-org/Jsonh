@@ -74,7 +74,7 @@ While JSON is designed to be readable for humans, it's secondary to communicatio
 }
 ```
 
-No comments, no trailing commas, no multiline strings, no floating-point literals or hexadecimal. It's as raw as it gets, and leaves something to be desired.
+No comments, no trailing commas, no multiline strings, no hexadecimal numbers. It's as raw as it gets, and leaves something to be desired.
 
 ### Over HJSON
 
@@ -226,7 +226,7 @@ There are three named literals, just like JSON.
 - `true` - true (boolean)
 - `false` - false (boolean)
 
-Other named literals (such as `Infinity` and `NaN`) are left as quoteless strings.
+Other named literals (such as `Infinity` and `NaN`) are left as [quoteless strings](#quoteless-strings-aka-unquoted-strings).
 
 ### Strings
 
@@ -246,7 +246,7 @@ All strings can contain escape sequences starting with `\`:
 - `\x00` - short UTF-16 escape sequence (`\xE7` = `ç`)
 - `\U00000000` - UTF-32 escape sequence (`\U0001F47D` = `👽`)
 - `\(newline)` - escaped newline (`\(newline)` = `(empty)`)
-- `\(rune)` - literal character (`\q` = `q`)
+- `\(character)` - literal character (`\q` = `q`)
 
 Verbatim strings start with `@`. They ignore escape sequences:
 ```jsonh
