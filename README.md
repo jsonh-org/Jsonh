@@ -608,9 +608,9 @@ This style guide is a suggestion for writing readable JSONH.
   1_000_000
   ```
 
-- Use lowercase base specifiers.
+- Use lowercase base specifiers with uppercase digits.
   ```jsonh
-  0b1
+  0xDEADBEEF
   ```
 
 ### Comments
