@@ -627,6 +627,190 @@ This style guide is a suggestion for writing readable JSONH.
   */
   ```
 
+## Regular Expressions
+
+The following Regular Expressions (RegEx) can be used to match a JSONH token.
+
+They match the token anywhere in the input. To match the token only:
+- Prepend:
+    ```regexp
+    ^[\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*
+    ```
+- Append:
+    ```regexp
+    [\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*$
+    ```
+
+They are in PCRE-flavor. To use ECMAScript-flavor:
+- Replace:
+    ```regexp
+    \\x\{([0-9A-Fa-f]{4})\}
+    ```
+- With:
+    ```regexp
+    \\u$1`
+    ```
+
+To apply JSON escaping, you can use an online tool (e.g. https://www.shortc.com/json-escaper).
+
+### Whitespace
+
+<details>
+<summary>Expand</summary>
+
+<!--
+\x{0020}|\x{00A0}|\x{1680}|\x{2000}|\x{2001}|\x{2002}|\x{2003}|\x{2004}|\x{2005}|\x{2006}|\x{2007}|\x{2008}|\x{2009}|\x{200A}|\x{202F}|\x{205F}|\x{3000}|\x{2028}|\x{2029}|\x{0009}|\x{000A}|\x{000B}|\x{000C}|\x{000D}|\x{0085}
+-->
+```regexp
+[\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]
+```
+</details>
+
+### Named Literal
+
+<details>
+<summary>Expand</summary>
+
+<!-- [true, false, null] -->
+```regexp
+(true|false|null)
+```
+</details>
+
+### Number
+
+<details>
+<summary>Expand</summary>
+
+<!-- [decimal-number, hexadecimal-number, binary-number, octal-number] -->
+```regexp
+(([-+]?((([0-9](_*[0-9])*)(\.)?(([0-9](_*[0-9])*))?)|(\.([0-9](_*[0-9])*)))([eE][-+]?((([0-9](_*[0-9])*)(\.)?(([0-9](_*[0-9])*))?)|(\.([0-9](_*[0-9])*))))?(?![\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*[^\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}\,\[\]\{\}\/\#\"\'\@]))|([-+]?0[xX]((([0-9a-fA-F](_*[0-9a-fA-F])*)(\.)?(([0-9a-fA-F](_*[0-9a-fA-F])*))?)|(\.([0-9a-fA-F](_*[0-9a-fA-F])*)))([eE][-+]?((([0-9a-fA-F](_*[0-9a-fA-F])*)(\.)?(([0-9a-fA-F](_*[0-9a-fA-F])*))?)|(\.([0-9a-fA-F](_*[0-9a-fA-F])*))))?(?![\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*[^\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}\,\[\]\{\}\/\#\"\'\@]))|([-+]?0[bB]((([0-1](_*[0-1])*)(\.)?(([0-1](_*[0-1])*))?)|(\.([0-1](_*[0-1])*)))([eE][-+]?((([0-1](_*[0-1])*)(\.)?(([0-1](_*[0-1])*))?)|(\.([0-1](_*[0-1])*))))?(?![\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*[^\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}\,\[\]\{\}\/\#\"\'\@]))|([-+]?0[oO]((([0-7](_*[0-7])*)(\.)?(([0-7](_*[0-7])*))?)|(\.([0-7](_*[0-7])*)))([eE][-+]?((([0-7](_*[0-7])*)(\.)?(([0-7](_*[0-7])*))?)|(\.([0-7](_*[0-7])*))))?(?![\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*[^\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}\,\[\]\{\}\/\#\"\'\@])))
+```
+</details>
+
+#### Decimal (base-10)
+
+<details>
+<summary>Expand</summary>
+
+<!-- (sign) [digits (dot) (digits), dot digits] (exponent (sign) [digits (dot) (digits), dot digits]) NOT<(whitespace) quoteless-string-or-property> -->
+```regexp
+([-+]?((([0-9](_*[0-9])*)(\.)?(([0-9](_*[0-9])*))?)|(\.([0-9](_*[0-9])*)))([eE][-+]?((([0-9](_*[0-9])*)(\.)?(([0-9](_*[0-9])*))?)|(\.([0-9](_*[0-9])*))))?(?![\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*[^\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}\,\[\]\{\}\/\#\"\'\@]))
+```
+</details>
+
+#### Hexadecimal (base-16)
+
+<details>
+<summary>Expand</summary>
+
+<!-- (sign) (specifier) [digits (dot) (digits), dot digits] (exponent (sign) [digits (dot) (digits), dot digits]) (whitespace) NOT<(whitespace) quoteless-string-or-property> -->
+```regexp
+([-+]?0[xX]((([0-9a-fA-F](_*[0-9a-fA-F])*)(\.)?(([0-9a-fA-F](_*[0-9a-fA-F])*))?)|(\.([0-9a-fA-F](_*[0-9a-fA-F])*)))([eE][-+]?((([0-9a-fA-F](_*[0-9a-fA-F])*)(\.)?(([0-9a-fA-F](_*[0-9a-fA-F])*))?)|(\.([0-9a-fA-F](_*[0-9a-fA-F])*))))?(?![\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*[^\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}\,\[\]\{\}\/\#\"\'\@]))
+```
+</details>
+
+#### Binary (base-2)
+
+<details>
+<summary>Expand</summary>
+
+<!-- (sign) (specifier) [digits (dot) (digits), dot digits] (exponent (sign) [digits (dot) (digits), dot digits]) (whitespace) NOT<(whitespace) quoteless-string-or-property> -->
+```regexp
+([-+]?0[bB]((([0-1](_*[0-1])*)(\.)?(([0-1](_*[0-1])*))?)|(\.([0-1](_*[0-1])*)))([eE][-+]?((([0-1](_*[0-1])*)(\.)?(([0-1](_*[0-1])*))?)|(\.([0-1](_*[0-1])*))))?(?![\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*[^\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}\,\[\]\{\}\/\#\"\'\@]))
+```
+</details>
+
+#### Octal (base-8)
+
+<details>
+<summary>Expand</summary>
+
+<!-- (sign) (specifier) [digits (dot) (digits), dot digits] (exponent (sign) [digits (dot) (digits), dot digits]) (whitespace) NOT<(whitespace) quoteless-string-or-property> -->
+```regexp
+([-+]?0[oO]((([0-7](_*[0-7])*)(\.)?(([0-7](_*[0-7])*))?)|(\.([0-7](_*[0-7])*)))([eE][-+]?((([0-7](_*[0-7])*)(\.)?(([0-7](_*[0-7])*))?)|(\.([0-7](_*[0-7])*))))?(?![\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*[^\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}\,\[\]\{\}\/\#\"\'\@]))
+```
+</details>
+
+### String
+
+<details>
+<summary>Expand</summary>
+
+<!-- [verbatim-multi-quoted-string, verbatim-quoted-string, verbatim-quoteless-string, multi-quoted-string, quoted-string, quoteless-string] -->
+```regexp
+((\@(("|'){3,})[\s\S]*?(\1))|(\@("|')[\s\S]*?(\1))|(\@([^\,\:\[\]\{\}\/\#\"\'\@\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]|(\\[\n\r\x{2028}\x{2029}]))+([^\,\:\[\]\{\}\/\#\"\'\@\n\r\x{2028}\x{2029}]|(\\[\n\r\x{2028}\x{2029}]))*)|((("|'){3,})([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\1))|(("|')([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\1))|(([^\\\,\:\[\]\{\}\/\#\"\'\@\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))+([^\\\,\:\[\]\{\}\/\#\"\'\@\n\r\x{2028}\x{2029}]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*))
+```
+</details>
+
+#### Quoted String
+
+<details>
+<summary>Expand</summary>
+
+<!-- quote [NOT<backslash>, escape]{0+} backreference -->
+```regexp
+(("|')([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\1))
+```
+</details>
+
+#### Multi-Quoted String
+
+<details>
+<summary>Expand</summary>
+
+<!-- quote{3+} [NOT<backslash>, escape]{0+} backreference -->
+```regexp
+((("|'){3,})([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\1))
+```
+</details>
+
+#### Quoteless String
+
+<details>
+<summary>Expand</summary>
+
+<!-- NOT<[reserved-except-escape, whitespace]>{1+} NOT<[reserved-except-escape, newline]>{0+} -->
+```regexp
+(([^\\\,\:\[\]\{\}\/\#\"\'\@\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))+([^\\\,\:\[\]\{\}\/\#\"\'\@\n\r\x{2028}\x{2029}]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*)
+```
+</details>
+
+#### Verbatim Quoted String
+
+<details>
+<summary>Expand</summary>
+
+verbatim quote{3+} -> backreference
+
+<!-- verbatim quote (any){0+} backreference -->
+```regexp
+(\@("|')[\s\S]*?(\1))
+```
+</details>
+
+#### Verbatim Multi-Quoted String
+
+<details>
+<summary>Expand</summary>
+
+<!-- verbatim quote{3+} (any){0+} backreference -->
+```regexp
+(\@(("|'){3,})[\s\S]*?(\1))
+```
+</details>
+
+#### Verbatim Quoteless String
+
+<details>
+<summary>Expand</summary>
+
+<!-- verbatim NOT<[reserved, whitespace]>{1+} NOT<[reserved, newline]>{0+} -->
+```regexp
+(\@([^\,\:\[\]\{\}\/\#\"\'\@\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]|(\\[\n\r\x{2028}\x{2029}]))+([^\,\:\[\]\{\}\/\#\"\'\@\n\r\x{2028}\x{2029}]|(\\[\n\r\x{2028}\x{2029}]))*)
+```
+</details>
+
 ## Version History
 
 ### JSONH V2 - 2025/11/19
