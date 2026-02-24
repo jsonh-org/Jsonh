@@ -631,6 +631,9 @@ This style guide is a suggestion for writing readable JSONH.
 
 The following Regular Expressions (RegEx) can be used to match a JSONH token.
 
+<details>
+<summary>Expand</summary>
+
 They match the token anywhere in the input. To match the token only:
 - <details>
   <summary>Expand</summary>
@@ -837,6 +840,7 @@ verbatim quote{3+} -> backreference
 ```regexp
 (\@([^\,\:\[\]\{\}\/\#\"\'\@\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]|(\\[\n\r\x{2028}\x{2029}]))+([^\,\:\[\]\{\}\/\#\"\'\@\n\r\x{2028}\x{2029}]|(\\[\n\r\x{2028}\x{2029}]))*)
 ```
+</details>
 </details>
 
 ## Version History
