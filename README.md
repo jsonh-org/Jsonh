@@ -662,7 +662,7 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
 ### Whitespace
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=%5E%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%24&flags=g">try me</a>)</summary>
 
 <!--
 \x{0020}|\x{00A0}|\x{1680}|\x{2000}|\x{2001}|\x{2002}|\x{2003}|\x{2004}|\x{2005}|\x{2006}|\x{2007}|\x{2008}|\x{2009}|\x{200A}|\x{202F}|\x{205F}|\x{3000}|\x{2028}|\x{2029}|\x{0009}|\x{000A}|\x{000B}|\x{000C}|\x{000D}|\x{0085}
@@ -675,7 +675,7 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
 ### Named Literal
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=%5E%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*(true%7Cfalse%7Cnull)%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%24&flags=g">try me</a>)</summary>
 
 <!-- [true, false, null] -->
 ```regexp
@@ -686,7 +686,7 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
 ### Number
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=%5E%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*((%5B-%2B%5D%3F(((%5B0-9%5D(_*%5B0-9%5D)*)(%5C.)%3F((%5B0-9%5D(_*%5B0-9%5D)*))%3F)%7C(%5C.(%5B0-9%5D(_*%5B0-9%5D)*)))(%5BeE%5D%5B-%2B%5D%3F(((%5B0-9%5D(_*%5B0-9%5D)*)(%5C.)%3F((%5B0-9%5D(_*%5B0-9%5D)*))%3F)%7C(%5C.(%5B0-9%5D(_*%5B0-9%5D)*))))%3F(%3F!%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5E%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5C%2C%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5D))%7C(%5B-%2B%5D%3F0%5BxX%5D(((%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*)(%5C.)%3F((%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*))%3F)%7C(%5C.(%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*)))(%5BeE%5D%5B-%2B%5D%3F(((%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*)(%5C.)%3F((%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*))%3F)%7C(%5C.(%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*))))%3F(%3F!%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5E%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5C%2C%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5D))%7C(%5B-%2B%5D%3F0%5BbB%5D(((%5B0-1%5D(_*%5B0-1%5D)*)(%5C.)%3F((%5B0-1%5D(_*%5B0-1%5D)*))%3F)%7C(%5C.(%5B0-1%5D(_*%5B0-1%5D)*)))(%5BeE%5D%5B-%2B%5D%3F(((%5B0-1%5D(_*%5B0-1%5D)*)(%5C.)%3F((%5B0-1%5D(_*%5B0-1%5D)*))%3F)%7C(%5C.(%5B0-1%5D(_*%5B0-1%5D)*))))%3F(%3F!%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5E%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5C%2C%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5D))%7C(%5B-%2B%5D%3F0%5BoO%5D(((%5B0-7%5D(_*%5B0-7%5D)*)(%5C.)%3F((%5B0-7%5D(_*%5B0-7%5D)*))%3F)%7C(%5C.(%5B0-7%5D(_*%5B0-7%5D)*)))(%5BeE%5D%5B-%2B%5D%3F(((%5B0-7%5D(_*%5B0-7%5D)*)(%5C.)%3F((%5B0-7%5D(_*%5B0-7%5D)*))%3F)%7C(%5C.(%5B0-7%5D(_*%5B0-7%5D)*))))%3F(%3F!%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5E%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5C%2C%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5D)))%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%24&flags=g">try me</a>)</summary>
 
 <!-- [decimal-number, hexadecimal-number, binary-number, octal-number] -->
 ```regexp
@@ -697,7 +697,7 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
 #### Decimal (base-10)
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=%5E%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*(%5B-%2B%5D%3F(((%5B0-9%5D(_*%5B0-9%5D)*)(%5C.)%3F((%5B0-9%5D(_*%5B0-9%5D)*))%3F)%7C(%5C.(%5B0-9%5D(_*%5B0-9%5D)*)))(%5BeE%5D%5B-%2B%5D%3F(((%5B0-9%5D(_*%5B0-9%5D)*)(%5C.)%3F((%5B0-9%5D(_*%5B0-9%5D)*))%3F)%7C(%5C.(%5B0-9%5D(_*%5B0-9%5D)*))))%3F(%3F!%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5E%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5C%2C%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5D))%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%24&flags=g">try me</a>)</summary>
 
 <!-- (sign) [digits (dot) (digits), dot digits] (exponent (sign) [digits (dot) (digits), dot digits]) NOT<(whitespace) quoteless-string-or-property> -->
 ```regexp
@@ -708,7 +708,7 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
 #### Hexadecimal (base-16)
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=%5E%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*(%5B-%2B%5D%3F0%5BxX%5D(((%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*)(%5C.)%3F((%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*))%3F)%7C(%5C.(%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*)))(%5BeE%5D%5B-%2B%5D%3F(((%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*)(%5C.)%3F((%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*))%3F)%7C(%5C.(%5B0-9a-fA-F%5D(_*%5B0-9a-fA-F%5D)*))))%3F(%3F!%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5E%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5C%2C%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5D))%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%24&flags=g">try me</a>)</summary>
 
 <!-- (sign) (specifier) [digits (dot) (digits), dot digits] (exponent (sign) [digits (dot) (digits), dot digits]) (whitespace) NOT<(whitespace) quoteless-string-or-property> -->
 ```regexp
@@ -719,7 +719,7 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
 #### Binary (base-2)
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=%5E%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*(%5B-%2B%5D%3F0%5BbB%5D(((%5B0-1%5D(_*%5B0-1%5D)*)(%5C.)%3F((%5B0-1%5D(_*%5B0-1%5D)*))%3F)%7C(%5C.(%5B0-1%5D(_*%5B0-1%5D)*)))(%5BeE%5D%5B-%2B%5D%3F(((%5B0-1%5D(_*%5B0-1%5D)*)(%5C.)%3F((%5B0-1%5D(_*%5B0-1%5D)*))%3F)%7C(%5C.(%5B0-1%5D(_*%5B0-1%5D)*))))%3F(%3F!%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5E%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5C%2C%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5D))%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%24&flags=g">try me</a>)</summary>
 
 <!-- (sign) (specifier) [digits (dot) (digits), dot digits] (exponent (sign) [digits (dot) (digits), dot digits]) (whitespace) NOT<(whitespace) quoteless-string-or-property> -->
 ```regexp
@@ -730,7 +730,7 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
 #### Octal (base-8)
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=%5E%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*(%5B-%2B%5D%3F0%5BoO%5D(((%5B0-7%5D(_*%5B0-7%5D)*)(%5C.)%3F((%5B0-7%5D(_*%5B0-7%5D)*))%3F)%7C(%5C.(%5B0-7%5D(_*%5B0-7%5D)*)))(%5BeE%5D%5B-%2B%5D%3F(((%5B0-7%5D(_*%5B0-7%5D)*)(%5C.)%3F((%5B0-7%5D(_*%5B0-7%5D)*))%3F)%7C(%5C.(%5B0-7%5D(_*%5B0-7%5D)*))))%3F(%3F!%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5E%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5C%2C%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5D))%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%24&flags=g">try me</a>)</summary>
 
 <!-- (sign) (specifier) [digits (dot) (digits), dot digits] (exponent (sign) [digits (dot) (digits), dot digits]) (whitespace) NOT<(whitespace) quoteless-string-or-property> -->
 ```regexp
@@ -741,40 +741,40 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
 ### String
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=((%5C%40((%22%7C')%7B3%2C%7D)%5B%5Cs%5CS%5D*%3F(%5C3))%7C(%5C%40(%22%7C')%5B%5Cs%5CS%5D*%3F(%5C7))%7C(%5C%40(%5B%5E%5C%2C%5C%3A%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D%7C(%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D))%2B(%5B%5E%5C%2C%5C%3A%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D%7C(%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D))*)%7C(((%22%7C')%7B3%2C%7D)(%5B%5E%5C%5C%5D%7C((%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D)%7C(%5C%5Cu%5B0-9a-fA-F%5D%7B4%7D)%7C(%5C%5Cx%5B0-9a-fA-F%5D%7B2%7D)%7C(%5C%5CU%5B0-9a-fA-F%5D%7B8%7D)%7C(%5C%5C%5B%5EuxU%5D)))*%3F(%5C15))%7C((%22%7C')(%5B%5E%5C%5C%5D%7C((%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D)%7C(%5C%5Cu%5B0-9a-fA-F%5D%7B4%7D)%7C(%5C%5Cx%5B0-9a-fA-F%5D%7B2%7D)%7C(%5C%5CU%5B0-9a-fA-F%5D%7B8%7D)%7C(%5C%5C%5B%5EuxU%5D)))*%3F(%5C26))%7C((%5B%5E%5C%5C%5C%2C%5C%3A%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D%7C((%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D)%7C(%5C%5Cu%5B0-9a-fA-F%5D%7B4%7D)%7C(%5C%5Cx%5B0-9a-fA-F%5D%7B2%7D)%7C(%5C%5CU%5B0-9a-fA-F%5D%7B8%7D)%7C(%5C%5C%5B%5EuxU%5D)))%2B(%5B%5E%5C%5C%5C%2C%5C%3A%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D%7C((%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D)%7C(%5C%5Cu%5B0-9a-fA-F%5D%7B4%7D)%7C(%5C%5Cx%5B0-9a-fA-F%5D%7B2%7D)%7C(%5C%5CU%5B0-9a-fA-F%5D%7B8%7D)%7C(%5C%5C%5B%5EuxU%5D)))*))&flags=g">try me</a>)</summary>
 
 <!-- [verbatim-multi-quoted-string, verbatim-quoted-string, verbatim-quoteless-string, multi-quoted-string, quoted-string, quoteless-string] -->
 ```regexp
-((\@(("|'){3,})[\s\S]*?(\1))|(\@("|')[\s\S]*?(\1))|(\@([^\,\:\[\]\{\}\/\#\"\'\@\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]|(\\[\n\r\x{2028}\x{2029}]))+([^\,\:\[\]\{\}\/\#\"\'\@\n\r\x{2028}\x{2029}]|(\\[\n\r\x{2028}\x{2029}]))*)|((("|'){3,})([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\1))|(("|')([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\1))|(([^\\\,\:\[\]\{\}\/\#\"\'\@\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))+([^\\\,\:\[\]\{\}\/\#\"\'\@\n\r\x{2028}\x{2029}]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*))
+((\@(("|'){3,})[\s\S]*?(\3))|(\@("|')[\s\S]*?(\7))|(\@([^\,\:\[\]\{\}\/\#\"\'\@\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]|(\\[\n\r\x{2028}\x{2029}]))+([^\,\:\[\]\{\}\/\#\"\'\@\n\r\x{2028}\x{2029}]|(\\[\n\r\x{2028}\x{2029}]))*)|((("|'){3,})([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\15))|(("|')([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\26))|(([^\\\,\:\[\]\{\}\/\#\"\'\@\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))+([^\\\,\:\[\]\{\}\/\#\"\'\@\n\r\x{2028}\x{2029}]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*))
 ```
 </details>
 
 #### Quoted String
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=((%22%7C')(%5B%5E%5C%5C%5D%7C((%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D)%7C(%5C%5Cu%5B0-9a-fA-F%5D%7B4%7D)%7C(%5C%5Cx%5B0-9a-fA-F%5D%7B2%7D)%7C(%5C%5CU%5B0-9a-fA-F%5D%7B8%7D)%7C(%5C%5C%5B%5EuxU%5D)))*%3F(%5C2))&flags=g">try me</a>)</summary>
 
 <!-- quote [NOT<backslash>, escape]{0+} backreference -->
 ```regexp
-(("|')([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\1))
+(("|')([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\2))
 ```
 </details>
 
 #### Multi-Quoted String
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=(((%22%7C')%7B3%2C%7D)(%5B%5E%5C%5C%5D%7C((%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D)%7C(%5C%5Cu%5B0-9a-fA-F%5D%7B4%7D)%7C(%5C%5Cx%5B0-9a-fA-F%5D%7B2%7D)%7C(%5C%5CU%5B0-9a-fA-F%5D%7B8%7D)%7C(%5C%5C%5B%5EuxU%5D)))*%3F(%5C2))&flags=g">try me</a>)</summary>
 
 <!-- quote{3+} [NOT<backslash>, escape]{0+} backreference -->
 ```regexp
-((("|'){3,})([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\1))
+((("|'){3,})([^\\]|((\\[\n\r\x{2028}\x{2029}])|(\\u[0-9a-fA-F]{4})|(\\x[0-9a-fA-F]{2})|(\\U[0-9a-fA-F]{8})|(\\[^uxU])))*?(\2))
 ```
 </details>
 
 #### Quoteless String
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=((%5B%5E%5C%5C%5C%2C%5C%3A%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D%7C((%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D)%7C(%5C%5Cu%5B0-9a-fA-F%5D%7B4%7D)%7C(%5C%5Cx%5B0-9a-fA-F%5D%7B2%7D)%7C(%5C%5CU%5B0-9a-fA-F%5D%7B8%7D)%7C(%5C%5C%5B%5EuxU%5D)))%2B(%5B%5E%5C%5C%5C%2C%5C%3A%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D%7C((%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D)%7C(%5C%5Cu%5B0-9a-fA-F%5D%7B4%7D)%7C(%5C%5Cx%5B0-9a-fA-F%5D%7B2%7D)%7C(%5C%5CU%5B0-9a-fA-F%5D%7B8%7D)%7C(%5C%5C%5B%5EuxU%5D)))*)&flags=g">try me</a>)</summary>
 
 <!-- NOT<[reserved-except-escape, whitespace]>{1+} NOT<[reserved-except-escape, newline]>{0+} -->
 ```regexp
@@ -785,31 +785,31 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
 #### Verbatim Quoted String
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=(%5C%40(%22%7C')%5B%5Cs%5CS%5D*%3F(%5C2))&flags=g">try me</a>)</summary>
 
 verbatim quote{3+} -> backreference
 
 <!-- verbatim quote (any){0+} backreference -->
 ```regexp
-(\@("|')[\s\S]*?(\1))
+(\@("|')[\s\S]*?(\2))
 ```
 </details>
 
 #### Verbatim Multi-Quoted String
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=(%5C%40((%22%7C')%7B3%2C%7D)%5B%5Cs%5CS%5D*%3F(%5C2))&flags=g">try me</a>)</summary>
 
 <!-- verbatim quote{3+} (any){0+} backreference -->
 ```regexp
-(\@(("|'){3,})[\s\S]*?(\1))
+(\@(("|'){3,})[\s\S]*?(\2))
 ```
 </details>
 
 #### Verbatim Quoteless String
 
 <details>
-<summary>Expand</summary>
+<summary>Expand (<a href="https://regex101.com/?regex=(%5C%40(%5B%5E%5C%2C%5C%3A%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D%7C(%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D))%2B(%5B%5E%5C%2C%5C%3A%5C%5B%5C%5D%5C%7B%5C%7D%5C%2F%5C%23%5C%22%5C'%5C%40%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D%7C(%5C%5C%5B%5Cn%5Cr%5Cx%7B2028%7D%5Cx%7B2029%7D%5D))*)&flags=g">try me</a>)</summary>
 
 <!-- verbatim NOT<[reserved, whitespace]>{1+} NOT<[reserved, newline]>{0+} -->
 ```regexp
