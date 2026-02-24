@@ -629,7 +629,7 @@ This style guide is a suggestion for writing readable JSONH.
 
 ## Regular Expressions
 
-The following Regular Expressions (RegEx) can be used to match a JSONH token. They are not perfect.
+The following Regular Expressions (RegEx) can be used to match a JSONH token.
 
 They match the token anywhere in the input. To match the token only:
 - <details>
