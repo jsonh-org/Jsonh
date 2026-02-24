@@ -659,7 +659,29 @@ They are in PCRE-flavor. To use ECMAScript-flavor:
       ```
   </details>
 
-### Whitespace
+### Comments & Whitespace
+
+<details>
+<summary>Expand (<a href="https://regex101.com/?regex=(((%5C%23.*)%7C(%5C%2F%5C%2F.*)%7C(%5C%2F(%5C%3D*)%5C*)%5B%5Cs%5CS%5D*%3F(%5C*%5C6%5C%2F))%7C%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D)*&flags=g">try me</a>)</summary>
+
+<!-- [hash-comment, line-comment, block-comment, whitespace]{0+} -->
+```regexp
+(((\#.*)|(\/\/.*)|(\/(\=*)\*)[\s\S]*?(\*\6\/))|[\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}])*
+```
+</details>
+
+#### Comment
+
+<details>
+<summary>Expand (<a href="https://regex101.com/?regex=((%5C%23.*)%7C(%5C%2F%5C%2F.*)%7C(%5C%2F(%5C%3D*)%5C*)%5B%5Cs%5CS%5D*%3F(%5C*%5C5%5C%2F))&flags=g">try me</a>)</summary>
+
+<!-- [hash-comment, line-comment, block-comment] -->
+```regexp
+((\#.*)|(\/\/.*)|(\/(\=*)\*)[\s\S]*?(\*\5\/))
+```
+</details>
+
+#### Whitespace
 
 <details>
 <summary>Expand (<a href="https://regex101.com/?regex=%5E%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D%5B%5Cx%7B0009%7D-%5Cx%7B000D%7D%20%5Cx%7B0085%7D%5Cx%7B00A0%7D%5Cx%7B1680%7D%5Cx%7B2000%7D-%5Cx%7B200A%7D%5Cx%7B2028%7D%5Cx%7B2029%7D%5Cx%7B202F%7D%5Cx%7B205F%7D%5Cx%7B3000%7D%5D*%24&flags=g">try me</a>)</summary>
