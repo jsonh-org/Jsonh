@@ -632,26 +632,32 @@ This style guide is a suggestion for writing readable JSONH.
 The following Regular Expressions (RegEx) can be used to match a JSONH token.
 
 They match the token anywhere in the input. To match the token only:
-- Prepend:
-    ```regexp
-    ^[\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*
-    ```
-- Append:
-    ```regexp
-    [\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*$
-    ```
+- <details>
+  <summary>Expand</summary>
+
+  - Prepend:
+      ```regexp
+      ^[\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*
+      ```
+  - Append:
+      ```regexp
+      [\x{0009}-\x{000D} \x{0085}\x{00A0}\x{1680}\x{2000}-\x{200A}\x{2028}\x{2029}\x{202F}\x{205F}\x{3000}]*$
+      ```
+  </details>
 
 They are in PCRE-flavor. To use ECMAScript-flavor:
-- Replace:
-    ```regexp
-    \\x\{([0-9A-Fa-f]{4})\}
-    ```
-- With:
-    ```regexp
-    \\u$1`
-    ```
+- <details>
+  <summary>Expand</summary>
 
-To apply JSON escaping, you can use an online tool (e.g. https://www.shortc.com/json-escaper).
+  - Replace:
+      ```regexp
+      \\x\{([0-9A-Fa-f]{4})\}
+      ```
+  - With:
+      ```regexp
+      \\u$1`
+      ```
+  </details>
 
 ### Whitespace
 
