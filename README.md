@@ -634,6 +634,8 @@ The following Regular Expressions (RegEx) can be used to match a JSONH token.
 <details>
 <summary>Expand</summary>
 
+They may not be perfect or catch all error cases.
+
 They match the token anywhere in the input. To match the token only:
 - <details>
   <summary>Expand</summary>
