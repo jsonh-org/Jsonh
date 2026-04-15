@@ -596,6 +596,11 @@ This style guide is a suggestion for writing readable JSONH.
       """
   ```
 
+- Use verbatim double-quoted strings for file paths, even if the path does not contain any backslashes.
+  ```jsonh
+  @"a\b\cats.png"
+  ```
+
 ### Numbers
 
 - Avoid leading/trailing decimal points.
