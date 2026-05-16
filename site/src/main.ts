@@ -47,18 +47,19 @@ function convert(): void {
         return;
     }
 
-    const elementResult = JsonhReader.parseElementFromString(input.value, new JsonhReaderOptions({
+    const indent: string | null = prettyPrint.checked ? "    " : null;
+
+    const reader = JsonhReader.fromString(input.value, new JsonhReaderOptions({
         parseSingleElement: true,
         version: parseInt(jsonhVersion.value),
     }));
-    if (elementResult.isError) {
-        output.value = `Error: ${elementResult.error.message}`;
+    const result = reader.parseJson(false, indent);
+    if (result.isError) {
+        output.value = `Error: ${result.error.message}`;
         return;
     }
 
-    const indent: string = prettyPrint.checked ? "    " : "";
-
-    output.value = JSON.stringify(elementResult.value, null, indent);
+    output.value = result.value;
 }
 
 input.addEventListener('input', convert);
