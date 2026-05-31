@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "jsonh-ts": "^3.6.0",
+    "jsonh-ts": "^3.8.0",
     "typescript": "~6.0.3",
-    "vite": "^8.0.13"
+    "vite": "^8.0.14"
   }
 }
