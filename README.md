@@ -640,7 +640,7 @@ Added verbatim strings (`@a\b\c`) and nestable block comments (`/=* *=/`).
 
 ### JSONH V1 - 2025/03/19
 
-The original language specification.
+The original language specification. This version is deprecated and should not be used.
 
 ## Contributing
 
