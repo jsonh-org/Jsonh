@@ -661,7 +661,7 @@ Categories:
 | --- | --- | --- | --- | --- |
 | C# | [JsonhCs](https://github.com/jsonh-org/JsonhCs) | [![NuGet](https://img.shields.io/nuget/v/JsonhCs.svg)](https://www.nuget.org/packages/JsonhCs) | ⭐ | Parser
 | C++ | [JsonhCpp](https://github.com/jsonh-org/JsonhCpp) | [![C++](https://img.shields.io/github/release/jsonh-org/JsonhCpp.svg?label=c%2b%2b)](https://github.com/jsonh-org/JsonhCpp/releases) | ⭐ | Parser
-| TypeScript<br/>JavaScript | [JsonhTs](https://github.com/jsonh-org/JsonhTs) | [![NPM](https://img.shields.io/npm/v/jsonh-ts.svg)](https://www.npmjs.com/package/jsonh-ts) | ⭐ | Parser
+| TypeScript,<br/>JavaScript | [JsonhTs](https://github.com/jsonh-org/JsonhTs) | [![NPM](https://img.shields.io/npm/v/jsonh-ts.svg)](https://www.npmjs.com/package/jsonh-ts) | ⭐ | Parser
 | Python | [JsonhPy](https://github.com/jsonh-org/JsonhPy) | [![PyPI](https://img.shields.io/pypi/v/JsonhPy.svg)](https://pypi.python.org/pypi/JsonhPy) | ⭐ | Parser
 | Rust | [JsonhRs](https://github.com/jsonh-org/JsonhRs) | [![crates.io](https://img.shields.io/crates/v/jsonh_rs.svg)](https://crates.io/crates/jsonh_rs) | ⭐ | Parser
 | VSCode | [JsonhVscode](https://github.com/jsonh-org/JsonhVscode) | [![Visual Studio Marketplace](https://img.shields.io/github/release/jsonh-org/JsonhVscode.svg?label=vs%20marketplace)](https://marketplace.visualstudio.com/items?itemName=Joyless.jsonh-vscode) | 🍬 | Highlighter & LSP using JsonhTs
