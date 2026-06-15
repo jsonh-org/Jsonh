@@ -92,3 +92,9 @@ select {
     color: #c9d1d9;
     cursor: pointer;
 }
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
