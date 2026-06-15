@@ -48,9 +48,9 @@ Usability is at the forefront of JSONH, and this is evident in the features borr
 
 ```
 JSON
-  |_______
-  |       |
-JSON5   HJSON
+  |______
+  |      |
+JSON5  HJSON
   |
 JSONH
 ```
