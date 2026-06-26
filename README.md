@@ -508,21 +508,15 @@ The following characters are valid line terminators:
 
 This corresponds to [line terminators in JSON5](https://spec.json5.org/#escapes).
 
-## Metadata
+## File Encoding
 
-### Byte Encoding
+JSONH is a Unicode character-based format, so it doesn't have a standard file or byte representation.
 
-JSONH can be written in any unicode encoding (UTF-8, UTF-16, UTF-32).
+As such, JSONH can be stored with any byte encoding (e.g. UTF-8, UTF-16, UTF-32) and any file extension.
 
-### File Extension
+Byte Order Marks (U+FEFF) don't have any special meaning in JSONH and will be treated as part of a string. However, implementations may choose to strip Byte Order Marks when reading from files or byte streams.
 
-JSONH files should always end with `.jsonh`.
-
-### Versioning
-
-JSONH uses a `MAJOR.MINOR` versioning system to ensure changes to the syntax are properly documented.
-
-Implementations may support one or more major versions of JSONH.
+The recommended encoding is UTF-8 and the recommended file extension is `.jsonh`.
 
 ## Style Guide
 
@@ -530,9 +524,13 @@ The JSONH format is intended to be flexible, so feel free to ignore any recommen
 
 This style guide is a suggestion for writing readable JSONH.
 
-### General
+### Files
 
-- Use UTF-8 encoding (see [UTF-8 Everywhere](http://utf8everywhere.org)).
+- Use the UTF-8 encoding (see [UTF-8 Everywhere](http://utf8everywhere.org)).
+- Use the `.jsonh` file extension.
+
+### Whitespace
+
 - Use UNIX-style line endings (`\n`).
 - Use ASCII spaces (` `).
 - Use four spaces for indents.
@@ -633,6 +631,10 @@ This style guide is a suggestion for writing readable JSONH.
   ```
 
 ## Version History
+
+JSONH uses a `MAJOR.MINOR` versioning system to ensure changes to the syntax are properly documented.
+
+Implementations may support one or more major versions of JSONH.
 
 ### JSONH V2 - 2025/11/19
 
