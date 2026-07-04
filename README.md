@@ -161,7 +161,7 @@ Since JSONH is a superset of JSON and JSON5, all valid JSON and JSON5 is valid J
 
 Objects contain a sequence of properties (`key: value`).
 
-They are wrapped in braces (`{}`).
+They are wrapped in curly braces (`{}`).
 
 Properties are separated by a comma (`,`) or a newline. A single trailing comma is allowed.
 
@@ -169,14 +169,16 @@ If two properties have the same key, the first property is replaced.
 
 ```jsonh
 {
-    a: b
-    c: d
+    food: pizza
+    drink: cola
+    price: 500
 }
 ```
 ```json
 {
-    "a": "b",
-    "c": "d"
+    "food": "pizza",
+    "drink": "cola",
+    "price": 500
 }
 ```
 
@@ -207,20 +209,20 @@ snacks: [
 
 Arrays contain an ordered sequence of items.
 
-They are wrapped in brackets (`[]`).
+They are wrapped in square brackets (`[]`).
 
 Items are separated by a comma (`,`) or a newline. A single trailing comma is allowed.
 
 ```jsonh
 [
-    a
-    b
+    pizza
+    cola
 ]
 ```
 ```json
 [
-    "a",
-    "b"
+    "pizza",
+    "cola"
 ]
 ```
 
@@ -385,7 +387,7 @@ They are comprised of the following components:
   - Optional
 - An integer
   - Optional if preceded by integer dot
-- An exponent (`e` or `E`)
+- An exponent symbol (`e` or `E`)
   - Optional
 - A sign (`+` or `-`)
   - Optional if not hexadecimal
@@ -422,7 +424,7 @@ Digits can be separated by one-or-more underscores (`_`) for readability.
     500,
     6.4,
     354246.123,
-    258750.0
+    2587.36767578125
 ]
 ```
 
@@ -436,7 +438,7 @@ Comments are allowed in the space of any whitespace and do not affect the result
 
 #### Line Comments
 
-Line comments start with a hash (`#`) or a double-slash (`//`) and are terminated by a newline.
+Line comments start with a hash (`#`) or a double-slash (`//`) and end with a newline.
 
 ```jsonh
 # Numbers
@@ -448,7 +450,7 @@ Line comments start with a hash (`#`) or a double-slash (`//`) and are terminate
 
 #### Block Comments
 
-Block comments start with a slash-asterisk (`/*`) and are terminated by an asterisk-slash (`*/`).
+Block comments start with a slash-asterisk (`/*`) and end with an asterisk-slash (`*/`).
 
 ```jsonh
 [ /*
@@ -456,7 +458,7 @@ Block comments start with a slash-asterisk (`/*`) and are terminated by an aster
 */ ]
 ```
 ```json
-[  ]
+[]
 ```
 
 Nestable block comments have one or more equal-signs (`=`) between the slash (`/`) and asterisk (`*`):
@@ -475,31 +477,31 @@ Nestable block comments have one or more equal-signs (`=`) between the slash (`/
 ### Whitespace
 
 The following characters are valid whitespace:
-- `\u0020` (space)
-- `\u00A0` (non-breaking space)
-- `\u1680` (Ogham space mark)
-- `\u2000` (en quad)
-- `\u2001` (em quad)
-- `\u2002` (en space)
-- `\u2003` (em space)
-- `\u2004` (three-per-em space)
-- `\u2005` (four-per-em space)
-- `\u2006` (six-per-em space)
-- `\u2007` (figure space)
-- `\u2008` (punctuation space)
-- `\u2009` (thin space)
-- `\u200A` (hair space)
-- `\u202F` (narrow no-break space)
-- `\u205F` (medium mathematical space)
-- `\u3000` (ideographic space)
-- `\u2028` (line separator)
-- `\u2029` (paragraph separator)
-- `\u0009` (character tabulation / horizontal tab)
-- `\u000A` (line feed)
-- `\u000B` (line tabulation / vertical tab)
-- `\u000C` (form feed)
-- `\u000D` (carriage return)
-- `\u0085` (next line)
+- `U+0020` (space)
+- `U+00A0` (non-breaking space)
+- `U+1680` (Ogham space mark)
+- `U+2000` (en quad)
+- `U+2001` (em quad)
+- `U+2002` (en space)
+- `U+2003` (em space)
+- `U+2004` (three-per-em space)
+- `U+2005` (four-per-em space)
+- `U+2006` (six-per-em space)
+- `U+2007` (figure space)
+- `U+2008` (punctuation space)
+- `U+2009` (thin space)
+- `U+200A` (hair space)
+- `U+202F` (narrow no-break space)
+- `U+205F` (medium mathematical space)
+- `U+3000` (ideographic space)
+- `U+2028` (line separator)
+- `U+2029` (paragraph separator)
+- `U+0009` (character tabulation / horizontal tab)
+- `U+000A` (line feed)
+- `U+000B` (line tabulation / vertical tab)
+- `U+000C` (form feed)
+- `U+000D` (carriage return)
+- `U+0085` (next line)
 
 This corresponds to [`char.IsWhiteSpace` in .NET](https://learn.microsoft.com/en-us/dotnet/api/system.char.iswhitespace#remarks).
 
