@@ -11,6 +11,7 @@ Since JSONH is compatible with JSON, any JSONH syntax can be represented with eq
 
 - [Website](https://jsonh-org.github.io/Jsonh) - Try out the JSONH format online.
 - [Implementations](#implementations) - See a table of parsers and syntax highlighters for JSONH.
+- [Specification](https://github.com/jsonh-org/Jsonh/blob/main/Specification.md) - Read the detailed specification for the JSONH format.
 
 ## Example
 
