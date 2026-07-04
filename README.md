@@ -7,7 +7,10 @@ JSONH provides a much more elegant way to write JSON that's designed for humans 
 
 Since JSONH is compatible with JSON, any JSONH syntax can be represented with equivalent JSON.
 
-Try it online at https://jsonh-org.github.io/Jsonh!
+## Links
+
+- [Website](https://jsonh-org.github.io/Jsonh) - Try out the JSONH format online.
+- [Implementations](#implementations) - See a table of parsers and syntax highlighters for JSONH.
 
 ## Example
 
