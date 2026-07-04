@@ -163,7 +163,7 @@ Objects contain a sequence of properties (`key: value`).
 
 They are wrapped in braces (`{}`).
 
-Properties are separated with a comma (`,`) or a newline. A single trailing comma is allowed.
+Properties are separated by a comma (`,`) or a newline. A single trailing comma is allowed.
 
 If two properties have the same key, the first property is replaced.
 
@@ -179,6 +179,8 @@ If two properties have the same key, the first property is replaced.
     "c": "d"
 }
 ```
+
+#### Braceless Objects
 
 A braceless object can be created at the root level. It terminates at the end of the document.
 
@@ -207,7 +209,7 @@ Arrays contain an ordered sequence of items.
 
 They are wrapped in brackets (`[]`).
 
-Items are separated with a comma (`,`) or a newline. A single trailing comma is allowed.
+Items are separated by a comma (`,`) or a newline. A single trailing comma is allowed.
 
 ```jsonh
 [
@@ -286,7 +288,7 @@ world\n"
 
 Multi-quoted strings are wrapped in three or more double-quotes (`"""`) or single-quotes (`'''`).
 
-If the string starts with (whitespace -> newline) and ends with (newline -> whitespace), the whitespace after the last newline is stripped from the beginning of each line, including escaped whitespace/newlines.
+If the string starts with (whitespace → newline) and ends with (newline → whitespace), the whitespace after the last newline is stripped from the beginning of each line, including escaped whitespace/newlines.
 ```jsonh
    """
   hello
@@ -327,12 +329,12 @@ Otherwise, no whitespace is stripped.
 > The recommended way for implementations to parse multi-quoted strings is with several forward-passes:
 > - **Pass 0:** read string
 > - **Condition:** skip remaining steps unless started with multiple quotes
-> - **Pass 1:** count leading whitespace -> newline
+> - **Pass 1:** count leading whitespace → newline
 > - **Condition:** skip remaining steps if pass 1 failed
-> - **Pass 2:** count trailing newline -> whitespace
+> - **Pass 2:** count trailing newline → whitespace
 > - **Condition:** skip remaining steps if pass 2 failed
-> - **Pass 3:** strip trailing newline -> whitespace
-> - **Pass 4:** strip leading whitespace -> newline
+> - **Pass 3:** strip trailing newline → whitespace
+> - **Pass 4:** strip leading whitespace → newline
 > - **Condition:** skip remaining steps if no trailing whitespace
 > - **Pass 5:** strip line-leading whitespace
 
@@ -347,7 +349,7 @@ Quoteless strings are terminated by a newline or a symbol.
 { "text": "hello world" }
 ```
 
-Unlike other types of strings, reserved symbols (`\`, `,`, `:`, `[`, `]`, `{`, `}`, `/`, `#`, `"`, `'`, `@`) and newlines must be escaped.
+Unlike other types of strings, reserved characters (`,`, `:`, `[`, `]`, `{`, `}`, `/`, `#`, `"`, `'`, `@`) and newlines must be escaped.
 
 ```jsonh
 this \, is a comma. this\
@@ -395,9 +397,9 @@ They are comprised of the following components:
   - Optional if preceded by integer dot
 
 By default, every digit is decimal (base-10). If a base is specified, every digit is in that base:
-- `0x` or `0X` -> hexadecimal (base-16)
-- `0b` or `0B` -> binary (base-2)
-- `0o` or `0O` -> octal (base-8)
+- `0x` or `0X` → hexadecimal (base-16)
+- `0b` or `0B` → binary (base-2)
+- `0o` or `0O` → octal (base-8)
 
 Digits can be separated by one-or-more underscores (`_`) for readability.
   - Underscores must be between digits or base specifiers or underscores.
