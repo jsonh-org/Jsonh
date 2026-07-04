@@ -1,4 +1,4 @@
-<img src="https://github.com/jsonh-org/Jsonh/blob/main/IconUpscaled.png?raw=true" width=180>
+<img src="https://github.com/jsonh-org/Jsonh/blob/main/IconUpscaled.png?raw=true" width=180 style="image-rendering: pixelated;">
 
 **JSON for Humans.**
 
@@ -57,7 +57,7 @@ JSONH
 
 ## JSONH-chan
 
-<img src="https://github.com/jsonh-org/Jsonh/blob/main/JsonhChanUpscaled.png?raw=true" width=128>
+<img src="https://github.com/jsonh-org/Jsonh/blob/main/JsonhChanUpscaled.png?raw=true" width=128 style="image-rendering: pixelated;">
 
 *Name another format that features an anime mascot!*
 
