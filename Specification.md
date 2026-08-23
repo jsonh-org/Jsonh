@@ -92,6 +92,8 @@ Properties contain a key (any string), a colon (`:`) and a value (any element).
 
 Properties are separated by a comma (`,`) or a newline. Objects may contain a single trailing comma (`,`).
 
+Parsers MAY allow properties which are not properly separated if they are unambiguous (e.g. `{a: "b" c: "d"}`).
+
 If two properties have the same key, the last property replaces the first property.
 
 Parsers SHOULD have a configurable maximum structure depth, with a default value of 64, to prevent denial-of-service attacks.
@@ -139,6 +141,8 @@ price: 500
 Arrays are structures that contain an ordered sequence of items (any element).
 
 Items are separated by a comma (`,`) or a newline. Arrays may contain a single trailing comma (`,`).
+
+Parsers MAY allow items which are not properly separated if they are unambiguous (e.g. `["a" "b" "c"]`).
 
 Arrays start with an opening square bracket (`[`) and end with a closing square bracket (`]`).
 
